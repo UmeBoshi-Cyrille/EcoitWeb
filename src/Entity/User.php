@@ -29,7 +29,7 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     #[Vich\UploadableField(mapping: 'product_image', fileNameProperty: 'imageName', size: 'imageSize')]
     private ?File $imageFile = null;
 
-    #[ORM\Column(type: 'string')]
+    #[ORM\Column(type: 'string', nullable: true)]
     private ?string $imageName = null;
 
     #[ORM\Column(type: 'string', length: 180, unique: true)]
@@ -41,6 +41,8 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     #[ORM\Column(type: 'json')]
     #[Assert\NotNull()]
     private array $roles = [];
+
+    private ?string $plainPassword = null;
 
     #[ORM\Column(type: 'string')]
     #[Assert\NotBlank()]
@@ -74,7 +76,7 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     public function __construct()
     {
         $this->formations = new ArrayCollection();
-        $this->setUpdatedAt = new \DateTime();
+        $this->updatedAt = new \DateTimeImmutable();
     }
 
     public function getId(): ?int
@@ -126,6 +128,26 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     public function hasRole($role)
     {
     return in_array($role, $this->getRoles());
+    }
+
+     /**
+     * Get the value of plainPassword
+     */ 
+    public function getPlainPassword()
+    {
+        return $this->plainPassword;
+    }
+
+    /**
+     * Set the value of plainPassword
+     *
+     * @return  self
+     */ 
+    public function setPlainPassword($plainPassword)
+    {
+        $this->plainPassword = $plainPassword;
+
+        return $this;
     }
 
     /**
