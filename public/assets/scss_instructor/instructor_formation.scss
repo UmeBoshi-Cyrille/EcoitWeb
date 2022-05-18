@@ -1,0 +1,382 @@
+$breakpoints: (
+  "phone": 500px,
+  "tablet": 700px,
+  "tablet-large": 900px,
+  "desktop": 1024px,
+  "desktop-large": 1200px,
+);
+
+.formation_section,
+.formation_headsection,
+.formation_headOne,
+.head_image,
+.section_mainFormation,
+.sections_side,
+.formation_wrapper,
+.formationForm,
+.formationForm div,
+.form_wrap,
+.form_wrap div,
+.panel_section,
+.panel_sectionWrap,
+.a_btn,
+.lesson_panel,
+.panel_lessonWrap,
+.lesson_wrap,
+.lesson_wrap div {
+  display: flex;
+}
+
+.formation_section,
+.formation_headsection,
+.formation_headOne,
+.section_mainFormation,
+.sections_side,
+.formation_wrapper,
+.formationForm,
+.formationForm div,
+.form_wrap,
+.panel_section,
+.panel_sectionWrap,
+.lesson_panel,
+.panel_lessonWrap {
+  flex-direction: column;
+}
+
+.formation_section,
+.formation_headsection,
+.formation_headOne,
+.head_image,
+.section_mainFormation,
+.sections_side,
+.formation_wrapper,
+.formationForm,
+.form_wrap,
+.panel_section,
+.panel_sectionWrap,
+.a_btn,
+.lesson_panel,
+.panel_lessonWrap {
+  justify-content: center;
+}
+
+.formation_section,
+.formation_headsection,
+.formation_headOne,
+.head_image,
+.section_mainFormation,
+.sections_side,
+.formation_wrapper,
+.formationForm,
+.form_wrap,
+.panel_section,
+.panel_sectionWrap,
+.a_btn,
+.lesson_panel,
+.panel_lessonWrap {
+  align-items: center;
+}
+
+.form_wrap div,
+.lesson_wrap div {
+  align-items: flex-start;
+}
+
+.formation_section,
+.formation_headOne,
+.section_mainFormation,
+.formation_wrapper,
+.panel_section,
+.panel_sectionWrap,
+.formationForm div {
+  width: 100%;
+}
+
+.formation_section {
+  margin-top: 120px;
+}
+
+.formation_headsection,
+.sections_side,
+.formationForm {
+  width: 95%;
+}
+
+/* ------- SECTION HEAD ------ */
+
+.formation_headsection {
+  margin-bottom: 20px;
+}
+
+.formation_headOne {
+  text-align: center;
+  padding: 20px;
+
+  .formation_title {
+    margin-bottom: 20px;
+    font-size: 30px;
+  }
+}
+
+.head_image {
+  width: 200px;
+  height: 200px;
+}
+
+.formation_sectionImg {
+  width: 100%;
+  height: 100%;
+}
+
+/* ------- end SECTION HEAD ------ */
+
+/* ------- SECTION MAIN ------ */
+
+.section_mainFormation {
+  padding: 20px 0 20px 0;
+
+  .sections_side {
+    padding: 20px 0 20px 0;
+  }
+
+  .formation_wrapper {
+    padding: 20px 0 20px 0;
+  }
+
+  input[type="text"],
+  textarea,
+  input[type="date"],
+  .category {
+    margin: 5px 0 15px 0;
+    padding: 8px;
+    border: none;
+    box-sizing: border-box;
+    z-index: 0;
+  }
+
+  input[type="text"],
+  textarea {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  input[type="date"],
+  .category {
+    width: 150px;
+  }
+
+  .formation_button {
+    width: 200px;
+    height: 50px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 1px 1px 6px black;
+    background-color: #38a3a5;
+  }
+
+  .path_return {
+    font-size: 25px;
+  }
+}
+
+/* ------- end SECTION MAIN ------ */
+
+/* ----- PANEL ----- */
+
+.panel_section {
+  margin-top: 20px;
+
+  .panel_footer,
+  .panel_lessonFooter {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .panel_body {
+    position: relative;
+  }
+
+  .panel_lessonHead,
+  .panel_footer {
+    width: 100%;
+  }
+
+  .panel_heading,
+  .panel_body,
+  .panel_lessonBody,
+  .panel_lessonFooter {
+    width: 90%;
+  }
+
+  .panel_footer,
+  .panel_lessonFooter {
+    height: 75px;
+    padding: 10px 0 10px 0;
+  }
+
+  .panel_lessonFooter {
+    margin: 10px 0 20px 0;
+  }
+
+  .btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    margin: 10px;
+    box-shadow: 1px 1px 6px black;
+  }
+
+  .btn img {
+    width: 45px;
+    height: 45px;
+  }
+
+  .btnAddSection,
+  .btnRemoveSection {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  .a_btn {
+    position: absolute;
+    width: 160px;
+    height: 30px;
+  }
+
+  .a_btn {
+    width: 40px;
+    height: 30px;
+    border: 1px solid;
+    transition: 0.3s ease;
+  }
+
+  .a_btn:hover {
+    transform: scale(1.1);
+    z-index: 1;
+  }
+
+  .a_btn img {
+    width: 25px;
+    height: 25px;
+  }
+
+  .btnUpdate {
+    right: 10px;
+    bottom: 10px;
+  }
+
+  .btnDelete {
+    left: 10px;
+    bottom: 10px;
+  }
+}
+
+.panel_sectionWrap {
+  box-shadow: 1px 1px 6px #0e0101;
+  border: 2px solid #57cc99;
+  padding-top: 10px;
+}
+
+.panel_lessonWrap {
+  box-shadow: inset 1px 1px 6px #0e0101;
+}
+
+.panel_sectionWrap,
+.panel_lessonWrap {
+  .lesson_panel {
+    padding: 20px 20px 20px 20px;
+  }
+
+  .panel_heading {
+    margin: 0 0 20px 0;
+    padding: 10px 0 10px 0;
+  }
+
+  .section_h2 {
+    margin-left: 10px;
+    font-size: 30px;
+  }
+
+  .panel_lessonHead {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .lesson_h3 {
+    padding-left: 20px;
+    font-size: 25px;
+  }
+
+  .panel_lessonHead {
+    padding: 20px 0 20px 0;
+  }
+}
+
+/* ----- end PANEL ----- */
+
+@mixin media-min($_key) {
+  @media screen and(min-width: map-get($breakpoints, $_key)) {
+    & {
+      @content;
+    }
+  }
+}
+
+.formation_section {
+  @include media-min(("phone")) {
+    margin-top: 150px;
+
+    .formation_title {
+      font-size: 40px;
+    }
+
+    .head_image {
+      width: 250px;
+      height: 250px;
+    }
+  }
+}
+
+.formation_section {
+  @include media-min(("tablet")) {
+    .formation_title {
+      font-size: 45px;
+    }
+
+    .head_image {
+      width: 300px;
+      height: 300px;
+    }
+  }
+}
+
+.formation_section {
+  @include media-min(("tablet-large")) {
+    margin-top: 200px;
+
+    .formation_title {
+      font-size: 50px;
+    }
+
+    .head_image {
+      width: 400px;
+      height: 400px;
+    }
+  }
+}
+
+.section_mainFormation {
+  @include media-min(("desktop")) {
+    .sections_side {
+      width: 1000px;
+    }
+  }
+}

@@ -1,0 +1,411 @@
+$breakpoints: (
+  "phone": 500px,
+  "tablet": 700px,
+  "tablet-large": 900px,
+  "desktop": 1024px,
+  "desktop-large": 1200px,
+);
+
+.formation_section,
+.formation_headsection,
+.formation_headOne,
+.formation_headTwo,
+.formation_mainWrapper,
+.lesson_displayside,
+.sections_side,
+.lesson_headbox,
+.section_titlebox,
+.span_authorbox,
+.lesson_article,
+.lesson_articlep,
+.lesson_videoBox,
+.sections_wrapper,
+.section_button,
+.lesson_button {
+  display: flex;
+}
+
+.formation_headOne {
+  flex-direction: column-reverse;
+}
+
+.formation_section,
+.lesson_displayside,
+.sections_side,
+.lesson_headbox,
+.span_authorbox,
+.lesson_article,
+.sections_wrapper {
+  flex-direction: column;
+}
+
+.formation_mainWrapper,
+.formation_headsection,
+.formation_headOne,
+.formation_headTwo,
+.lesson_displayside,
+.sections_side,
+.formation_section,
+.lesson_article,
+.lesson_headbox,
+.lesson_videoBox,
+.sections_wrapper,
+.section_button,
+.lesson_button {
+  align-items: center;
+}
+
+.formation_headsection,
+.formation_headOne,
+.formation_headTwo,
+.lesson_headbox,
+.lesson_videoBox,
+.lesson_articlep {
+  justify-content: center;
+}
+
+.lesson_article {
+  justify-content: flex-end;
+}
+
+.section_button,
+.lesson_button {
+  justify-content: flex-start;
+}
+
+.section_button,
+.lesson_button {
+  justify-content: space-between;
+}
+
+.formation_section {
+  width: 100%;
+  margin-top: 50px;
+  margin-bottom: 50px;
+
+  .formation_headsection {
+    width: 100%;
+    margin-top: 50px;
+  }
+
+  .formation_headOne,
+  .formation_headTwo {
+    height: 100%;
+  }
+
+  .formation_headOne {
+    width: 100%;
+  }
+
+  .formation_title {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 20px;
+  }
+}
+
+.formation_headsection,
+.formation_mainWrapper,
+.lesson_videoBox {
+  width: 100%;
+}
+
+/* ----- LESSON SIDE ----- */
+
+.lesson_displayside {
+  border: 1px solid;
+  margin-bottom: 20px;
+
+  .lesson_headbox {
+    width: 100%;
+    height: 120px;
+  }
+
+  .section_title {
+    font-size: 35px;
+    margin-bottom: 20px;
+  }
+
+  .span_authorbox {
+    text-align: center;
+    line-height: 22px;
+  }
+
+  .span_author {
+    font-size: 13px;
+  }
+
+  .lesson_article {
+    width: 100%;
+    border-top: 2px solid;
+    padding: 20px 0 50px 0;
+  }
+
+  .lesson_title {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+    text-decoration: underline;
+  }
+
+  .lesson_articlep {
+    width: 85%;
+    margin: 30px 0 20px 0;
+    font-size: 20px;
+  }
+}
+
+/* ----- endLESSON SIDE ----- */
+
+/* ----- SECTIONS SIDE ----- */
+
+.sections_side {
+  margin-bottom: 50px;
+
+  .sections_wrapper,
+  .formations_sections {
+    width: 100%;
+  }
+
+  .section_button,
+  .lesson_button {
+    padding: 10px;
+  }
+
+  .section_button {
+    width: 100%;
+    height: 75px;
+    border: none;
+    border-bottom: 2px solid;
+  }
+
+  .section_h3,
+  .lesson_h3 {
+    margin-left: 10px;
+  }
+
+  .section_buttonImg {
+    width: 40px;
+    height: 40px;
+    padding: 5px;
+    margin-right: 5px;
+    border-radius: 50%;
+  }
+
+  .formation_lesson {
+    display: none;
+    width: 99%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .lesson_button {
+    width: 100%;
+    height: 50px;
+    border: none;
+    border-bottom: 1px solid;
+  }
+
+  .lesson_h3 {
+    margin-left: 20px;
+  }
+
+  .showLessons {
+    display: block;
+  }
+}
+
+.formation_lesson {
+  .lesson_buttonImg {
+    width: 30px;
+    height: 30px;
+    margin-right: 15px;
+    transform: rotate(50deg);
+  }
+}
+
+/* ----- end SECTIONS SIDE ----- */
+
+@mixin media-max($_key) {
+  @media screen and(max-width: map-get($breakpoints, $_key)) {
+    & {
+      @content;
+    }
+  }
+}
+
+.formation_headsection {
+  @include media-max("phone") {
+    height: 270px;
+
+    .formation_sectionImg {
+      width: 200px;
+      height: 150px;
+    }
+
+    .formation_title {
+      font-size: 27px;
+    }
+  }
+}
+
+.formation_mainWrapper {
+  @include media-max("phone") {
+    .section_title {
+      font-size: 25px;
+    }
+
+    .section_h3 {
+      font-size: 20px;
+    }
+
+    .lesson_title,
+    .lesson_h3 {
+      font-size: 18px;
+    }
+  }
+}
+
+.formation_headsection {
+  @include media-max(("desktop")) {
+    .formation_headOne {
+      width: 100%;
+    }
+
+    .formation_headTwo {
+      display: none;
+    }
+  }
+}
+
+.formation_mainWrapper {
+  @include media-max(("desktop")) {
+    flex-direction: column-reverse;
+
+    .lesson_displayside,
+    .sections_side {
+      width: 95%;
+    }
+  }
+}
+
+@mixin media-min($_key) {
+  @media screen and(min-width: map-get($breakpoints, $_key)) {
+    & {
+      @content;
+    }
+  }
+}
+
+.formation_headsection {
+  @include media-min("phone") {
+    margin-bottom: 30px;
+
+    .formation_sectionImg {
+      width: 250px;
+      height: 200px;
+    }
+
+    .formation_title {
+      font-size: 35px;
+    }
+  }
+}
+
+.formation_mainWrapper {
+  @include media-min("phone") {
+    .section_title {
+      font-size: 35px;
+    }
+
+    .section_h3 {
+      font-size: 25px;
+    }
+
+    .lesson_title {
+      font-size: 25px;
+    }
+
+    .lesson_h3 {
+      font-size: 17px;
+    }
+
+    .lesson_video {
+      width: 400px;
+      height: 250px;
+    }
+  }
+}
+
+.formation_section {
+  @include media-min("tablet") {
+    margin-top: 50px;
+
+    .formation_sectionImg {
+      width: 300px;
+      height: 250px;
+    }
+
+    .lesson_video {
+      width: 600px;
+      height: 350px;
+    }
+  }
+}
+
+.formation_section {
+  @include media-min("tablet-large") {
+    margin-top: 150px;
+  }
+}
+
+.formation_section {
+  @include media-min("desktop") {
+    .formation_headsection {
+      margin-bottom: 50px;
+      height: 300px;
+    }
+
+    .formation_headOne {
+      flex-direction: row;
+      justify-content: center;
+      width: 70%;
+      margin-left: 35px;
+      margin-right: auto;
+      background-color: black;
+    }
+
+    .formation_title {
+      margin-right: 20px;
+      color: #edf6f9;
+    }
+
+    .formation_headTwo {
+      // background-color: #04121b;
+      width: 28%;
+    }
+
+    .formation_sectionImgTwo {
+      width: 250px;
+      height: 350px;
+    }
+  }
+}
+
+.formation_mainWrapper {
+  @include media-min(("desktop")) {
+    width: 100%;
+    flex-direction: row;
+    justify-content: center;
+
+    .sections_side {
+      align-self: flex-start;
+      width: 25%;
+      margin-left: 10px;
+    }
+
+    .lesson_displayside {
+      width: 70%;
+    }
+  }
+}

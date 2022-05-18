@@ -1,0 +1,238 @@
+header,
+.hd-navbtn,
+.hd-dropdownContent {
+  position: fixed;
+}
+
+.hd-navdropdown {
+  position: relative;
+}
+
+header,
+header nav,
+.hd-head,
+.hd-title,
+.hd-navbtn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+header {
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 70px;
+  margin-bottom: 50px;
+}
+
+/* ---------- HEADER ICON ----------- */
+.hd-head,
+.hd-navbtn {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.hd-head {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  z-index: 4;
+}
+
+@media screen and (max-width: 900px) {
+  .hd-head .hd-title {
+    display: none;
+  }
+}
+
+/* ---------- end HEADER ICON ------- */
+/* ------------HEADER NAV------------- */
+.hd-navdropdown {
+  display: inline-block;
+  width: 100%;
+}
+
+.hd-navbtn,
+.hd-li {
+  display: block;
+}
+
+.hd-navbtn {
+  top: 20px;
+  right: 7px;
+  margin-right: 10px;
+  height: 30px;
+  width: 40px;
+  border-radius: 30%;
+  z-index: 2;
+  cursor: pointer;
+}
+
+.hd-iconNav {
+  padding: 1px 2px 1px 2px;
+  margin: 4px 0 4px 0;
+  border-radius: 35%;
+}
+
+.hd-dropdownContent {
+  display: none;
+  top: 70px;
+  right: 0;
+  height: 250px;
+  width: 100%;
+  overflow: auto;
+  z-index: 1;
+}
+
+.hd-li1 {
+  height: 20px;
+}
+
+.hd-li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: auto;
+  width: 60%;
+  height: 40px;
+}
+
+.hd-li a:hover {
+  padding-bottom: 3px;
+  border-bottom: 1px solid #0e0101;
+}
+
+.hd_home-li {
+  height: 40px;
+}
+
+header hr {
+  width: 70%;
+}
+
+.show {
+  display: block;
+}
+
+/* ---------- end HEADER NAV-------- */
+/* --------- MEDIA QUERIES --------- */
+@media screen and (min-width: 700px) {
+  header {
+    height: 75px;
+  }
+  header .hd-switchwrap {
+    bottom: 17px;
+    right: 20px;
+  }
+  header .hd-navdropdown {
+    top: 50px;
+    height: 50px;
+    width: 100%;
+  }
+  header .hd-navbtn {
+    display: none;
+  }
+  header .hd-dropdownContent {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    top: 50px;
+    right: 20px;
+    height: 50px;
+    width: 78%;
+    padding-right: 5px;
+  }
+  header .hd-li {
+    width: 80px;
+    height: 25px;
+    padding: 5px;
+  }
+  header .hd_home-li {
+    padding: 0px 15px 0px 15px;
+    margin-right: 5px;
+  }
+  header hr {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  header {
+    height: 150px;
+  }
+  header .hd-switchwrap {
+    bottom: 47px;
+    right: 20px;
+  }
+  header .hd-navdropdown {
+    top: 100px;
+  }
+  header .hd-dropdownContent {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    top: 100px;
+    height: 50px;
+    width: 60%;
+    padding-left: 50px;
+  }
+  header .hd-title {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    position: absolute;
+    top: 45px;
+    left: 200px;
+    width: 450px;
+  }
+  header .hd-title h1 {
+    padding-bottom: 10px;
+    text-shadow: 5px 5px 6px #6ea169;
+  }
+  header .hd-title h2 {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  header .hd-title {
+    top: 55px;
+    left: 200px;
+  }
+  header .hd-title h1 {
+    padding-bottom: 10px;
+  }
+  header .hd-dropdownContent {
+    width: 60%;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  header .hd-title h2 {
+    display: block;
+  }
+  header .hd-dropdownContent {
+    width: 40%;
+  }
+}
+/*# sourceMappingURL=header.css.map */

@@ -1,0 +1,285 @@
+.section_head,
+.formation_headwrapper,
+.formation_pagetitle,
+.searchbar,
+.button_search,
+.section_main,
+.formation_globalwrapper,
+.formation_container,
+.formation_title,
+.instructor_imgbox,
+.instructor_img,
+.instructor_buttons,
+._button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.section_head,
+.formation_headwrapper,
+.section_main,
+.formation_globalwrapper,
+.formation_title {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.formation_container {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+
+.section_head,
+.formation_headwrapper,
+.formation_pagetitle,
+.searchbar,
+.button_search,
+.section_main,
+.formation_globalwrapper,
+.formation_container,
+.instructor_img,
+.instructor_buttons,
+._button {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.instructor_imgbox {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.formation_pagetitle,
+.searchbar,
+.button_search,
+.instructor_imgbox,
+.instructor_img,
+.instructor_buttons,
+._button {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.section_head,
+.section_main,
+.formation_pagetitle,
+.searchbar,
+.section_main,
+.formation_container {
+  width: 100%;
+}
+
+.formation_headwrapper,
+.formation_globalwrapper {
+  width: 90%;
+}
+
+/* ----- SECTION HEAD ----- */
+.section_head {
+  height: 200px;
+  margin-top: 100px;
+  padding-top: 40px;
+  margin-bottom: 100px;
+  background: url("../storage/image/planet.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.section_head .formation_headwrapper {
+  margin-top: 50px;
+}
+
+.section_head .formation_pagetitle {
+  padding-bottom: 100px;
+}
+
+.section_head .searchbar {
+  margin-top: 30px;
+}
+
+.section_head .input_searchtext {
+  width: 70%;
+  padding: 7px 10px 7px 10px;
+  border-radius: 50px;
+}
+
+.section_head .button_search {
+  height: 40px;
+  width: 40px;
+  margin-left: 5px;
+  border-radius: 50%;
+}
+
+.section_head .search_icon {
+  height: 30px;
+  width: 30px;
+}
+
+/* ----- end SECTION HEAD ----- */
+/* ----- SECTION MAIN ----- */
+.section_main {
+  margin-bottom: 50px;
+}
+
+.section_main .formation_globalwrapper {
+  position: relative;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+  margin-bottom: 30px;
+}
+
+.section_main .formation_globalwrapper:hover {
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
+}
+
+.section_main .formation_container {
+  position: relative;
+  height: 170px;
+  width: 100%;
+  -webkit-box-shadow: 1px 1px 6px #000;
+          box-shadow: 1px 1px 6px #000;
+  cursor: pointer;
+}
+
+.section_main .formation_title {
+  height: 100%;
+  width: 100%;
+}
+
+.section_main .formation_h3 {
+  padding-top: 30px;
+  padding-bottom: 10px;
+}
+
+.section_main .instructor_imgbox {
+  height: 100%;
+  width: 100px;
+  margin-right: 20px;
+}
+
+.section_main .instructor_img {
+  width: 80px;
+  height: 100px;
+  margin-top: 20px;
+  margin-left: 10px;
+  border: 1px solid;
+  text-align: center;
+}
+
+.section_main .instructor_buttons {
+  position: absolute;
+  right: 5px;
+  bottom: 5px;
+}
+
+.section_main ._button {
+  border: 1px solid;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
+.section_main ._button:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.section_main ._button img,
+.section_main img {
+  width: 25px;
+  height: 25px;
+}
+
+.section_main ._button {
+  width: 40px;
+  height: 30px;
+}
+
+/* ----- end SECTION MAIN ----- */
+@media screen and (min-width: 500px) {
+  .section_head .formation_container,
+  .section_main .formation_container {
+    height: 150px;
+  }
+  .section_head .formation_title,
+  .section_main .formation_title {
+    height: 100%;
+    width: 80%;
+  }
+  .section_head .formation_h2,
+  .section_main .formation_h2 {
+    font-size: 35px;
+  }
+  .section_head .formation_h3,
+  .section_main .formation_h3 {
+    font-size: 25px;
+  }
+  .section_head .instructor_imgbox,
+  .section_main .instructor_imgbox {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 140px;
+  }
+  .section_head .instructor_img,
+  .section_main .instructor_img {
+    width: 110px;
+    height: 130px;
+    margin-left: 5px;
+    margin-top: 0;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .section_head {
+    margin-top: 120px;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .section_head {
+    margin-top: 170px;
+  }
+  .section_head .searchbar {
+    width: 40%;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .section_main .formation_h3 {
+    font-size: 35px;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .section_main .formation_globalwrapper {
+    width: 80%;
+  }
+  .section_main .instructor_imgbox {
+    position: absolute;
+    left: 0;
+  }
+  .section_main .instructor_buttons {
+    right: 10px;
+    bottom: 10px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .section_main .formation_globalwrapper {
+    width: 900px;
+  }
+  .section_main .instructor_img {
+    margin-left: 0px;
+  }
+}
+/*# sourceMappingURL=admin_instructors.css.map */

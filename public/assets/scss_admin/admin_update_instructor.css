@@ -1,0 +1,321 @@
+.formation_headwrapper,
+.formation_pagetitle,
+.searchbar,
+.button_search,
+.section_main,
+.formation_globalwrapper,
+.formation_container,
+.formation_title,
+.instructor_imgbox,
+.instructor_img,
+.instructor_choiceInput,
+.instructor_updateform,
+.delete_button,
+.preview_button,
+.intructor_input,
+.preview_button,
+.preview_box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.formation_headwrapper,
+.section_main,
+.formation_globalwrapper,
+.formation_title {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.formation_container {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+
+.instructor_updateform {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.formation_headwrapper,
+.formation_pagetitle,
+.searchbar,
+.button_search,
+.section_main,
+.formation_globalwrapper,
+.formation_container,
+.instructor_img,
+.instructor_choiceInput,
+.instructor_updateform,
+.delete_button,
+.preview_button,
+.intructor_input,
+.preview_button,
+.preview_box {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.instructor_imgbox {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.formation_pagetitle,
+.searchbar,
+.button_search,
+.instructor_imgbox,
+.instructor_img,
+.instructor_choiceInput,
+.instructor_updateform,
+.delete_button,
+.preview_button,
+.intructor_input,
+.preview_button,
+.preview_box {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.instructor_choiceInput {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.preview_box {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.formation_globalwrapper {
+  width: 90%;
+}
+
+/* ----- SECTION MAIN ----- */
+.section_main {
+  margin-top: 200px;
+  margin-bottom: 150px;
+}
+
+.section_main .formation_globalwrapper {
+  position: relative;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+  margin-bottom: 30px;
+}
+
+.section_main .formation_globalwrapper:hover {
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
+}
+
+.section_main .formation_container {
+  position: relative;
+  height: 170px;
+  width: 100%;
+  -webkit-box-shadow: 1px 1px 6px #000;
+          box-shadow: 1px 1px 6px #000;
+  cursor: pointer;
+}
+
+.section_main .formation_title {
+  height: 100%;
+  width: 100%;
+}
+
+.section_main .formation_h3 {
+  padding-top: 30px;
+  padding-bottom: 10px;
+}
+
+.section_main .instructor_imgbox {
+  height: 100%;
+  width: 100px;
+  margin-right: 20px;
+}
+
+.section_main .instructor_img {
+  width: 80px;
+  height: 100px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 10px;
+  border: 1px solid;
+  text-align: center;
+}
+
+.section_main .instructor_choiceInput {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  padding: 3px 0 3px 0;
+}
+
+.section_main .instructor_updateform {
+  margin: 0 13px 0 5px;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.section_main .updateFrom_h4 {
+  margin-right: 10px;
+}
+
+.section_main .intructor_input {
+  margin-left: 10px;
+  padding: 15px;
+  width: 100px;
+  height: 40px;
+}
+
+.section_main .instructor_button-roles {
+  margin-left: 10px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+.section_main .delete_button,
+.section_main .preview_button {
+  border: 1px solid;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
+.section_main .delete_button:hover,
+.section_main .preview_button:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.section_main .delete_button img,
+.section_main .preview_button img {
+  width: 25px;
+  height: 25px;
+}
+
+.section_main .delete_button {
+  width: 40px;
+  height: 30px;
+}
+
+.section_main .delete_button {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  width: 40px;
+  height: 30px;
+}
+
+.section_main .preview_button {
+  position: absolute;
+  top: 95px;
+  right: 5px;
+  width: 42px;
+  height: 32px;
+}
+
+.section_main .preview-box {
+  display: none;
+  margin-left: auto;
+  margin-right: auto;
+  width: 95%;
+  padding: 8px;
+  -webkit-box-shadow: 1px 1px 6px #000;
+          box-shadow: 1px 1px 6px #000;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.section_main .preview_p {
+  display: block;
+  padding: 20px;
+  z-index: 2;
+}
+
+.section_main .showPreview {
+  display: block;
+}
+
+/* ----- end SECTION MAIN ----- */
+@media screen and (min-width: 500px) {
+  .section_main .formation_container {
+    height: 200px;
+  }
+  .section_main .formation_title {
+    height: 100%;
+    width: 80%;
+  }
+  .section_main .formation_h2 {
+    font-size: 35px;
+  }
+  .section_main .formation_h3 {
+    font-size: 25px;
+  }
+  .section_main .instructor_imgbox {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 140px;
+  }
+  .section_main .instructor_img {
+    width: 110px;
+    height: 130px;
+    margin-left: 5px;
+    margin-bottom: 30px;
+    margin-top: 0;
+  }
+  .section_main .instructor_button-roles {
+    margin-right: 3px;
+  }
+  .section_main .delete_button {
+    top: 10px;
+    right: 10px;
+  }
+  .section_main .preview_button {
+    top: 120px;
+    right: 10px;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .section_main .formation_h3 {
+    font-size: 35px;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .section_main {
+    margin-top: 300px;
+  }
+  .section_main .formation_globalwrapper {
+    width: 80%;
+  }
+  .section_main .instructor_imgbox {
+    position: absolute;
+    left: 0;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .section_main .formation_globalwrapper {
+    width: 900px;
+  }
+  .section_main .instructor_img {
+    margin-left: 0px;
+  }
+}
+/*# sourceMappingURL=admin_update_instructor.css.map */

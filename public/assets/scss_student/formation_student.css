@@ -1,0 +1,386 @@
+.formation_section,
+.formation_headsection,
+.formation_headOne,
+.formation_headTwo,
+.formation_mainWrapper,
+.lesson_displayside,
+.sections_side,
+.lesson_headbox,
+.section_titlebox,
+.span_authorbox,
+.lesson_article,
+.lesson_articlep,
+.lesson_videoBox,
+.sections_wrapper,
+.section_button,
+.lesson_button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.formation_headOne {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+}
+
+.formation_section,
+.lesson_displayside,
+.sections_side,
+.lesson_headbox,
+.span_authorbox,
+.lesson_article,
+.sections_wrapper {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.formation_mainWrapper,
+.formation_headsection,
+.formation_headOne,
+.formation_headTwo,
+.lesson_displayside,
+.sections_side,
+.formation_section,
+.lesson_article,
+.lesson_headbox,
+.lesson_videoBox,
+.sections_wrapper,
+.section_button,
+.lesson_button {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.formation_headsection,
+.formation_headOne,
+.formation_headTwo,
+.lesson_headbox,
+.lesson_videoBox,
+.lesson_articlep {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.lesson_article {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.section_button,
+.lesson_button {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.section_button,
+.lesson_button {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.formation_section {
+  width: 100%;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.formation_section .formation_headsection {
+  width: 100%;
+  margin-top: 50px;
+}
+
+.formation_section .formation_headOne,
+.formation_section .formation_headTwo {
+  height: 100%;
+}
+
+.formation_section .formation_headOne {
+  width: 100%;
+}
+
+.formation_section .formation_title {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 20px;
+}
+
+.formation_headsection,
+.formation_mainWrapper,
+.lesson_videoBox {
+  width: 100%;
+}
+
+/* ----- LESSON SIDE ----- */
+.lesson_displayside {
+  border: 1px solid;
+  margin-bottom: 20px;
+}
+
+.lesson_displayside .lesson_headbox {
+  width: 100%;
+  height: 120px;
+}
+
+.lesson_displayside .section_title {
+  font-size: 35px;
+  margin-bottom: 20px;
+}
+
+.lesson_displayside .span_authorbox {
+  text-align: center;
+  line-height: 22px;
+}
+
+.lesson_displayside .span_author {
+  font-size: 13px;
+}
+
+.lesson_displayside .lesson_article {
+  width: 100%;
+  border-top: 2px solid;
+  padding: 20px 0 50px 0;
+}
+
+.lesson_displayside .lesson_title {
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px;
+  text-decoration: underline;
+}
+
+.lesson_displayside .lesson_articlep {
+  width: 85%;
+  margin: 30px 0 20px 0;
+  font-size: 20px;
+}
+
+/* ----- endLESSON SIDE ----- */
+/* ----- SECTIONS SIDE ----- */
+.sections_side {
+  margin-bottom: 50px;
+}
+
+.sections_side .sections_wrapper,
+.sections_side .formations_sections {
+  width: 100%;
+}
+
+.sections_side .section_button,
+.sections_side .lesson_button {
+  padding: 10px;
+}
+
+.sections_side .section_button {
+  width: 100%;
+  height: 75px;
+  border: none;
+  border-bottom: 2px solid;
+}
+
+.sections_side .section_h3,
+.sections_side .lesson_h3 {
+  margin-left: 10px;
+}
+
+.sections_side .section_buttonImg {
+  width: 40px;
+  height: 40px;
+  padding: 5px;
+  margin-right: 5px;
+  border-radius: 50%;
+}
+
+.sections_side .formation_lesson {
+  display: none;
+  width: 99%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.sections_side .lesson_button {
+  width: 100%;
+  height: 50px;
+  border: none;
+  border-bottom: 1px solid;
+}
+
+.sections_side .lesson_h3 {
+  margin-left: 20px;
+}
+
+.sections_side .showLessons {
+  display: block;
+}
+
+.formation_lesson .lesson_buttonImg {
+  width: 30px;
+  height: 30px;
+  margin-right: 15px;
+  -webkit-transform: rotate(50deg);
+          transform: rotate(50deg);
+}
+
+/* ----- end SECTIONS SIDE ----- */
+@media screen and (max-width: 500px) {
+  .formation_headsection {
+    height: 270px;
+  }
+  .formation_headsection .formation_sectionImg {
+    width: 200px;
+    height: 150px;
+  }
+  .formation_headsection .formation_title {
+    font-size: 27px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .formation_mainWrapper .section_title {
+    font-size: 25px;
+  }
+  .formation_mainWrapper .section_h3 {
+    font-size: 20px;
+  }
+  .formation_mainWrapper .lesson_title,
+  .formation_mainWrapper .lesson_h3 {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .formation_headsection .formation_headOne {
+    width: 100%;
+  }
+  .formation_headsection .formation_headTwo {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .formation_mainWrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  .formation_mainWrapper .lesson_displayside,
+  .formation_mainWrapper .sections_side {
+    width: 95%;
+  }
+}
+
+@media screen and (min-width: 500px) {
+  .formation_headsection {
+    margin-bottom: 30px;
+  }
+  .formation_headsection .formation_sectionImg {
+    width: 250px;
+    height: 200px;
+  }
+  .formation_headsection .formation_title {
+    font-size: 35px;
+  }
+}
+
+@media screen and (min-width: 500px) {
+  .formation_mainWrapper .section_title {
+    font-size: 35px;
+  }
+  .formation_mainWrapper .section_h3 {
+    font-size: 25px;
+  }
+  .formation_mainWrapper .lesson_title {
+    font-size: 25px;
+  }
+  .formation_mainWrapper .lesson_h3 {
+    font-size: 17px;
+  }
+  .formation_mainWrapper .lesson_video {
+    width: 400px;
+    height: 250px;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .formation_section {
+    margin-top: 50px;
+  }
+  .formation_section .formation_sectionImg {
+    width: 300px;
+    height: 250px;
+  }
+  .formation_section .lesson_video {
+    width: 600px;
+    height: 350px;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .formation_section {
+    margin-top: 150px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .formation_section .formation_headsection {
+    margin-bottom: 50px;
+    height: 300px;
+  }
+  .formation_section .formation_headOne {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 70%;
+    margin-left: 35px;
+    margin-right: auto;
+    background-color: black;
+  }
+  .formation_section .formation_title {
+    margin-right: 20px;
+    color: #edf6f9;
+  }
+  .formation_section .formation_headTwo {
+    width: 28%;
+  }
+  .formation_section .formation_sectionImgTwo {
+    width: 250px;
+    height: 350px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .formation_mainWrapper {
+    width: 100%;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .formation_mainWrapper .sections_side {
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+    width: 25%;
+    margin-left: 10px;
+  }
+  .formation_mainWrapper .lesson_displayside {
+    width: 70%;
+  }
+}
+/*# sourceMappingURL=formation_student.css.map */

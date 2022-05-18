@@ -1,0 +1,386 @@
+.formation_section,
+.formation_headsection,
+.formation_headOne,
+.head_image,
+.section_mainFormation,
+.sections_side,
+.formation_wrapper,
+.formationForm,
+.formationForm div,
+.form_wrap,
+.form_wrap div,
+.panel_section,
+.panel_sectionWrap,
+.a_btn,
+.lesson_panel,
+.panel_lessonWrap,
+.lesson_wrap,
+.lesson_wrap div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.formation_section,
+.formation_headsection,
+.formation_headOne,
+.section_mainFormation,
+.sections_side,
+.formation_wrapper,
+.formationForm,
+.formationForm div,
+.form_wrap,
+.panel_section,
+.panel_sectionWrap,
+.lesson_panel,
+.panel_lessonWrap {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.formation_section,
+.formation_headsection,
+.formation_headOne,
+.head_image,
+.section_mainFormation,
+.sections_side,
+.formation_wrapper,
+.formationForm,
+.form_wrap,
+.panel_section,
+.panel_sectionWrap,
+.a_btn,
+.lesson_panel,
+.panel_lessonWrap {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.formation_section,
+.formation_headsection,
+.formation_headOne,
+.head_image,
+.section_mainFormation,
+.sections_side,
+.formation_wrapper,
+.formationForm,
+.form_wrap,
+.panel_section,
+.panel_sectionWrap,
+.a_btn,
+.lesson_panel,
+.panel_lessonWrap {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.form_wrap div,
+.lesson_wrap div {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.formation_section,
+.formation_headOne,
+.section_mainFormation,
+.formation_wrapper,
+.panel_section,
+.panel_sectionWrap,
+.formationForm div {
+  width: 100%;
+}
+
+.formation_section {
+  margin-top: 120px;
+}
+
+.formation_headsection,
+.sections_side,
+.formationForm {
+  width: 95%;
+}
+
+/* ------- SECTION HEAD ------ */
+.formation_headsection {
+  margin-bottom: 20px;
+}
+
+.formation_headOne {
+  text-align: center;
+  padding: 20px;
+}
+
+.formation_headOne .formation_title {
+  margin-bottom: 20px;
+  font-size: 30px;
+}
+
+.head_image {
+  width: 200px;
+  height: 200px;
+}
+
+.formation_sectionImg {
+  width: 100%;
+  height: 100%;
+}
+
+/* ------- end SECTION HEAD ------ */
+/* ------- SECTION MAIN ------ */
+.section_mainFormation {
+  padding: 20px 0 20px 0;
+}
+
+.section_mainFormation .sections_side {
+  padding: 20px 0 20px 0;
+}
+
+.section_mainFormation .formation_wrapper {
+  padding: 20px 0 20px 0;
+}
+
+.section_mainFormation input[type="text"],
+.section_mainFormation textarea,
+.section_mainFormation input[type="date"],
+.section_mainFormation .category {
+  margin: 5px 0 15px 0;
+  padding: 8px;
+  border: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  z-index: 0;
+}
+
+.section_mainFormation input[type="text"],
+.section_mainFormation textarea {
+  width: 100%;
+  max-width: 100%;
+}
+
+.section_mainFormation input[type="date"],
+.section_mainFormation .category {
+  width: 150px;
+}
+
+.section_mainFormation .formation_button {
+  width: 200px;
+  height: 50px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  border: none;
+  border-radius: 10px;
+  -webkit-box-shadow: 1px 1px 6px black;
+          box-shadow: 1px 1px 6px black;
+  background-color: #38a3a5;
+}
+
+.section_mainFormation .path_return {
+  font-size: 25px;
+}
+
+/* ------- end SECTION MAIN ------ */
+/* ----- PANEL ----- */
+.panel_section {
+  margin-top: 20px;
+}
+
+.panel_section .panel_footer,
+.panel_section .panel_lessonFooter {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.panel_section .panel_body {
+  position: relative;
+}
+
+.panel_section .panel_lessonHead,
+.panel_section .panel_footer {
+  width: 100%;
+}
+
+.panel_section .panel_heading,
+.panel_section .panel_body,
+.panel_section .panel_lessonBody,
+.panel_section .panel_lessonFooter {
+  width: 90%;
+}
+
+.panel_section .panel_footer,
+.panel_section .panel_lessonFooter {
+  height: 75px;
+  padding: 10px 0 10px 0;
+}
+
+.panel_section .panel_lessonFooter {
+  margin: 10px 0 20px 0;
+}
+
+.panel_section .btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  margin: 10px;
+  -webkit-box-shadow: 1px 1px 6px black;
+          box-shadow: 1px 1px 6px black;
+}
+
+.panel_section .btn img {
+  width: 45px;
+  height: 45px;
+}
+
+.panel_section .btnAddSection,
+.panel_section .btnRemoveSection {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.panel_section .a_btn {
+  position: absolute;
+  width: 160px;
+  height: 30px;
+}
+
+.panel_section .a_btn {
+  width: 40px;
+  height: 30px;
+  border: 1px solid;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
+.panel_section .a_btn:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  z-index: 1;
+}
+
+.panel_section .a_btn img {
+  width: 25px;
+  height: 25px;
+}
+
+.panel_section .btnUpdate {
+  right: 10px;
+  bottom: 10px;
+}
+
+.panel_section .btnDelete {
+  left: 10px;
+  bottom: 10px;
+}
+
+.panel_sectionWrap {
+  -webkit-box-shadow: 1px 1px 6px #0e0101;
+          box-shadow: 1px 1px 6px #0e0101;
+  border: 2px solid #57cc99;
+  padding-top: 10px;
+}
+
+.panel_lessonWrap {
+  -webkit-box-shadow: inset 1px 1px 6px #0e0101;
+          box-shadow: inset 1px 1px 6px #0e0101;
+}
+
+.panel_sectionWrap .lesson_panel,
+.panel_lessonWrap .lesson_panel {
+  padding: 20px 20px 20px 20px;
+}
+
+.panel_sectionWrap .panel_heading,
+.panel_lessonWrap .panel_heading {
+  margin: 0 0 20px 0;
+  padding: 10px 0 10px 0;
+}
+
+.panel_sectionWrap .section_h2,
+.panel_lessonWrap .section_h2 {
+  margin-left: 10px;
+  font-size: 30px;
+}
+
+.panel_sectionWrap .panel_lessonHead,
+.panel_lessonWrap .panel_lessonHead {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.panel_sectionWrap .lesson_h3,
+.panel_lessonWrap .lesson_h3 {
+  padding-left: 20px;
+  font-size: 25px;
+}
+
+.panel_sectionWrap .panel_lessonHead,
+.panel_lessonWrap .panel_lessonHead {
+  padding: 20px 0 20px 0;
+}
+
+/* ----- end PANEL ----- */
+@media screen and (min-width: 500px) {
+  .formation_section {
+    margin-top: 150px;
+  }
+  .formation_section .formation_title {
+    font-size: 40px;
+  }
+  .formation_section .head_image {
+    width: 250px;
+    height: 250px;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .formation_section .formation_title {
+    font-size: 45px;
+  }
+  .formation_section .head_image {
+    width: 300px;
+    height: 300px;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .formation_section {
+    margin-top: 200px;
+  }
+  .formation_section .formation_title {
+    font-size: 50px;
+  }
+  .formation_section .head_image {
+    width: 400px;
+    height: 400px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .section_mainFormation .sections_side {
+    width: 1000px;
+  }
+}
+/*# sourceMappingURL=instructor_formation.css.map */

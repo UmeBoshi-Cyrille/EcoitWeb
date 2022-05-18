@@ -1,0 +1,203 @@
+$breakpoints: (
+  "phone": 500px,
+  "tablet": 700px,
+  "tablet-large": 900px,
+  "desktop": 1024px,
+  "desktop-large": 1200px,
+);
+
+.homeInstructor_section,
+.home_wrapper,
+.home_title,
+.home_container,
+.img-box,
+.home_box,
+.home_ul {
+  display: flex;
+}
+
+.home_wrapper,
+.home_container,
+.home_box,
+.home_ul {
+  flex-direction: column;
+}
+
+.homeInstructor_section,
+.home_wrapper,
+.home_container,
+.home_title,
+.img-box,
+.home_box {
+  justify-content: center;
+}
+
+.home_container,
+.img-box,
+.home_ul {
+  align-items: center;
+}
+
+.homeInstructor_section,
+.home_container,
+.home_title,
+.img-box,
+.home_box,
+.home_ul {
+  width: 100%;
+}
+
+.homeInstructor_section {
+  height: 75vh;
+
+  .home_wrapper {
+    width: 95%;
+  }
+
+  .home_title {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .home_h2 {
+    font-size: 20px;
+  }
+
+  .img-box {
+    padding: 20px 0 20px 0;
+  }
+
+  .home_ul {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .home_box li {
+    margin: 40px 0 40px 0;
+  }
+
+  .home_box a {
+    padding: 20px 15px 20px 15px;
+    border-radius: 50px;
+    border: 1px solid;
+    transition: 0.3s ease;
+  }
+
+  .home_box li:hover {
+    transform: scale(1.03);
+  }
+
+  .home_box a:hover {
+    text-decoration: underline;
+    border: none;
+  }
+
+  .home_a:hover {
+    background-color: rgb(219, 203, 109);
+  }
+
+  .home_a1:hover {
+    background-color: rgb(231, 178, 63);
+  }
+}
+
+@mixin media-max($_key) {
+  @media screen and(max-width: map-get($breakpoints, $_key)) {
+    & {
+      @content;
+    }
+  }
+}
+
+.homeInstructor_section {
+  @include media-max("phone") {
+    margin-top: 250px;
+    margin-bottom: 150px;
+
+    .home_h2 {
+      font-size: 30px;
+    }
+
+    .home_img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+@mixin media-min($_key) {
+  @media screen and(min-width: map-get($breakpoints, $_key)) {
+    & {
+      @content;
+    }
+  }
+}
+
+.homeInstructor_section {
+  @include media-min("phone") {
+    margin-top: 300px;
+    margin-bottom: 175px;
+
+    .home_h2 {
+      font-size: 30px;
+    }
+
+    .home_img {
+      width: 100%;
+      height: 400px;
+    }
+  }
+}
+
+.homeInstructor_section {
+  @include media-min("tablet") {
+    margin-top: 350px;
+    .home_img {
+      width: 600px;
+      height: 400px;
+    }
+  }
+}
+
+.homeInstructor_section {
+  @include media-min("tablet-large") {
+    margin-top: 400px;
+    .home_img {
+      width: 600px;
+      height: 400px;
+    }
+
+    .home_h2 {
+      font-size: 40px;
+    }
+  }
+}
+
+.homeInstructor_section {
+  @include media-min("desktop") {
+    margin-top: 400px;
+    margin-bottom: 200px;
+
+    .home_h2 {
+      font-size: 45px;
+    }
+
+    .home_container {
+      flex-direction: column-reverse;
+    }
+
+    .home_img {
+      width: 1000px;
+      height: 600px;
+    }
+
+    .home_ul {
+      flex-direction: row;
+      justify-content: center;
+    }
+
+    .home_ul li {
+      margin: 40px 20px 40px 20px;
+    }
+  }
+}

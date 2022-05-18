@@ -1,0 +1,209 @@
+$breakpoints: (
+  "phone": 500px,
+  "tablet": 700px,
+  "tablet-large": 900px,
+  "desktop": 1024px,
+  "desktop-large": 1200px,
+);
+
+section,
+form,
+.login_wrapper,
+.login_title-box,
+.login_container,
+.login_img-box,
+.form_box,
+.cancel_box {
+  display: flex;
+}
+
+section,
+.login_wrapper,
+.login_title-box,
+.login_container,
+.login_img-box {
+  justify-content: center;
+  align-items: center;
+}
+
+// .cancel_box {
+//   justify-content: center;
+// }
+
+form,
+.login_wrapper,
+.login_container,
+.form_box {
+  flex-direction: column;
+}
+
+section {
+  width: 100%;
+  height: 1000px;
+  padding-top: 50px;
+
+  .login_wrapper {
+    width: 90%;
+  }
+
+  .login_title-box,
+  .login_container,
+  .login_img-box {
+    width: 100%;
+  }
+
+  .login_img-box img {
+    width: 150px;
+    height: 150px;
+  }
+
+  .login_h2 {
+    padding: 30px 0 30px 0;
+    font-size: 25px;
+  }
+
+  .form_box {
+    position: relative;
+    width: 100%;
+  }
+
+  form,
+  .button_login,
+  .button_cancel,
+  .cancel_box {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  form {
+    width: 90%;
+  }
+
+  label {
+    padding-top: 20px;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="password"] {
+    width: 100%;
+    margin-top: 5px;
+    margin: 5px auto 0 auto;
+    padding: 12px 0 12px 8px;
+    border: none;
+    display: inline-block;
+    box-sizing: border-box;
+    z-index: 0;
+  }
+
+  .button_login,
+  .button_cancel {
+    margin-top: 30px;
+    margin-bottom: 40px;
+    padding: 15px 0 15px 0;
+    border: none;
+    border-radius: 50px;
+  }
+
+  .button_login:hover,
+  .button_cancel:hover {
+    opacity: 0.5;
+  }
+
+  .button_login {
+    width: 70%;
+  }
+
+  .checkbox {
+    margin-bottom: 10px;
+  }
+
+  .cancel_box {
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .span_password:hover {
+    text-decoration: underline;
+  }
+}
+
+@mixin media-max($_key) {
+  @media screen and(max-width: map-get($breakpoints, $_key)) {
+    & {
+      @content;
+    }
+  }
+}
+
+section {
+  @include media-max("phone") {
+    .cancel_box {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .button_cancel {
+      margin-left: auto;
+      width: 70%;
+    }
+
+    .span_password {
+      margin-bottom: 20px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+}
+
+@mixin media-min($_key) {
+  @media screen and(min-width: map-get($breakpoints, $_key)) {
+    & {
+      @content;
+    }
+  }
+}
+
+section {
+  @include media-min("phone") {
+    .login_h2 {
+      font-size: 45px;
+    }
+
+    .button_cancel {
+      width: 100px;
+      margin-left: 30px;
+    }
+
+    .span_password {
+      float: right;
+      width: 170px;
+      margin-right: 20px;
+    }
+  }
+}
+
+section {
+  @include media-min("tablet") {
+    .login_h2 {
+      font-size: 50px;
+    }
+
+    .login_img-box img {
+      width: 150px;
+      height: 150px;
+    }
+  }
+}
+
+section {
+  @include media-min("tablet-large") {
+    padding-top: 100px;
+
+    .login_wrapper {
+      max-width: 750px;
+    }
+  }
+}

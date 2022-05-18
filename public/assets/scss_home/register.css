@@ -1,0 +1,192 @@
+section,
+.subscribe_wrapper,
+.subscribe_title,
+.subscribe_container,
+.img-box,
+.form_box,
+.form,
+.cancel_box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+section,
+.subscribe_wrapper,
+.subscribe_title,
+.subscribe_container,
+.img-box {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.cancel_box {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+section,
+.subscribe_wrapper,
+.subscribe_container,
+.img-box,
+.form_box,
+.form {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+section {
+  height: 1000px;
+  width: 100%;
+  padding-top: 50px;
+}
+
+.subscribe_h2 {
+  padding: 20px 0 20px 0;
+}
+
+.subscribe_img {
+  width: 250px;
+  height: 250px;
+  margin: 10px 0 10px 0;
+  border-radius: 50%;
+}
+
+.subscribe_wrapper {
+  width: 90%;
+}
+
+.subscribe_title,
+.subscribe_container,
+.img-box,
+.form_box {
+  width: 100%;
+}
+
+.form {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px 0 20px 0;
+}
+
+.input1 {
+  display: none;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  margin-top: 5px;
+  margin: 5px auto 15px auto;
+  padding: 12px 0 12px 8px;
+  border: none;
+  display: inline-block;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  z-index: 0;
+}
+
+input {
+  width: 80%;
+}
+
+.hidden-row {
+  display: none;
+}
+
+.button_subscribe,
+.button_cancel {
+  padding: 15px 0 15px 0;
+  border: none;
+  border-radius: 50px;
+}
+
+.button_subscribe:hover,
+.button_cancel:hover {
+  opacity: 0.5;
+}
+
+.span_connexion:hover {
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 500px) {
+  section .cancel_box {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  section .button_cancel,
+  section .span_connexion {
+    margin-right: auto;
+    margin-left: auto;
+  }
+  section .button_cancel {
+    width: 70%;
+  }
+  section .span_connexion {
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (min-width: 500px) {
+  section .subscribe_h2 {
+    font-size: 45px;
+  }
+  section .subscribe_img {
+    width: 300px;
+    height: 300px;
+  }
+  section .button_cancel {
+    margin-left: 50px;
+    width: 100px;
+  }
+  section .span_connexion {
+    width: 140px;
+    margin-right: 20px;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  section {
+    height: 1200px;
+  }
+  section .subscribe_h2 {
+    font-size: 50px;
+  }
+  section .subscribe_img {
+    width: 400px;
+    height: 400px;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  section {
+    height: 1200px;
+    padding-top: 100px;
+  }
+  section .subscribe_wrapper {
+    max-width: 750px;
+  }
+  section .subscribe_img {
+    width: 450px;
+    height: 400px;
+  }
+}
+/*# sourceMappingURL=register.css.map */

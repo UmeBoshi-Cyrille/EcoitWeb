@@ -1,0 +1,326 @@
+$breakpoints: (
+  "phone": 500px,
+  "tablet": 700px,
+  "tablet-large": 900px,
+  "desktop": 1024px,
+  "desktop-large": 1200px,
+);
+
+.formation_headwrapper,
+.formation_pagetitle,
+.searchbar,
+.button_search,
+.section_main,
+.formation_globalwrapper,
+.formation_container,
+.formation_title,
+.instructor_imgbox,
+.instructor_img,
+.instructor_choiceInput,
+.instructor_updateform,
+.delete_button,
+.preview_button,
+.intructor_input,
+.preview_button,
+.preview_box {
+  display: flex;
+}
+
+.formation_headwrapper,
+.section_main,
+.formation_globalwrapper,
+.formation_title {
+  flex-direction: column;
+}
+
+.formation_container {
+  flex-direction: row-reverse;
+}
+
+.instructor_updateform {
+  flex-direction: row;
+}
+
+.formation_headwrapper,
+.formation_pagetitle,
+.searchbar,
+.button_search,
+.section_main,
+.formation_globalwrapper,
+.formation_container,
+.instructor_img,
+.instructor_choiceInput,
+.instructor_updateform,
+.delete_button,
+.preview_button,
+.intructor_input,
+.preview_button,
+.preview_box {
+  align-items: center;
+}
+
+.instructor_imgbox {
+  align-items: flex-start;
+}
+
+.formation_pagetitle,
+.searchbar,
+.button_search,
+.instructor_imgbox,
+.instructor_img,
+.instructor_choiceInput,
+.instructor_updateform,
+.delete_button,
+.preview_button,
+.intructor_input,
+.preview_button,
+.preview_box {
+  justify-content: center;
+}
+
+.instructor_choiceInput {
+  justify-content: flex-end;
+}
+
+.preview_box {
+  align-items: flex-start;
+}
+
+.formation_globalwrapper {
+  width: 90%;
+}
+
+/* ----- SECTION MAIN ----- */
+
+.section_main {
+  margin-top: 200px;
+  margin-bottom: 150px;
+
+  .formation_globalwrapper {
+    position: relative;
+    transition: 0.3s ease;
+    margin-bottom: 30px;
+  }
+
+  .formation_globalwrapper:hover {
+    transform: scale(1.02);
+  }
+
+  .formation_container {
+    position: relative;
+    height: 170px;
+    width: 100%;
+    box-shadow: 1px 1px 6px #000;
+    cursor: pointer;
+  }
+
+  .formation_title {
+    height: 100%;
+    width: 100%;
+  }
+
+  .formation_h3 {
+    padding-top: 30px;
+    padding-bottom: 10px;
+  }
+
+  .instructor_imgbox {
+    height: 100%;
+    width: 100px;
+    margin-right: 20px;
+  }
+
+  .instructor_img {
+    width: 80px;
+    height: 100px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 10px;
+    border: 1px solid;
+    text-align: center;
+  }
+
+  .instructor_choiceInput {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    padding: 3px 0 3px 0;
+  }
+
+  .instructor_updateform {
+    margin: 0 13px 0 5px;
+    font-size: 15px;
+    font-weight: bold;
+  }
+
+  .updateFrom_h4 {
+    margin-right: 10px;
+  }
+
+  .intructor_input {
+    margin-left: 10px;
+    padding: 15px;
+    width: 100px;
+    height: 40px;
+  }
+
+  .instructor_button-roles {
+    margin-left: 10px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+  }
+
+  .delete_button,
+  .preview_button {
+    border: 1px solid;
+    transition: 0.3s ease;
+  }
+
+  .delete_button:hover,
+  .preview_button:hover {
+    transform: scale(1.1);
+  }
+
+  .delete_button img,
+  .preview_button img {
+    width: 25px;
+    height: 25px;
+  }
+
+  .delete_button {
+    width: 40px;
+    height: 30px;
+  }
+
+  .delete_button {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    width: 40px;
+    height: 30px;
+  }
+
+  .preview_button {
+    position: absolute;
+    top: 95px;
+    right: 5px;
+    width: 42px;
+    height: 32px;
+  }
+
+  .preview-box {
+    display: none;
+    margin-left: auto;
+    margin-right: auto;
+    width: 95%;
+    padding: 8px;
+    box-shadow: 1px 1px 6px #000;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+
+  .preview_p {
+    display: block;
+    padding: 20px;
+    z-index: 2;
+  }
+
+  .showPreview {
+    display: block;
+  }
+}
+
+/* ----- end SECTION MAIN ----- */
+
+@mixin media-min($_key) {
+  @media screen and(min-width: map-get($breakpoints, $_key)) {
+    & {
+      @content;
+    }
+  }
+}
+
+.section_main {
+  @include media-min(("phone")) {
+    .formation_container {
+      height: 200px;
+    }
+
+    .formation_title {
+      height: 100%;
+      width: 80%;
+    }
+
+    .formation_h2 {
+      font-size: 35px;
+    }
+
+    .formation_h3 {
+      font-size: 25px;
+    }
+
+    .instructor_imgbox {
+      align-items: center;
+      width: 140px;
+    }
+
+    .instructor_img {
+      width: 110px;
+      height: 130px;
+      margin-left: 5px;
+      margin-bottom: 30px;
+      margin-top: 0;
+    }
+
+    .instructor_button-roles {
+      margin-right: 3px;
+    }
+
+    .delete_button {
+      top: 10px;
+      right: 10px;
+    }
+
+    .preview_button {
+      top: 120px;
+      right: 10px;
+    }
+  }
+}
+
+.section_main {
+  @include media-min(("tablet")) {
+    .formation_h3 {
+      font-size: 35px;
+    }
+  }
+}
+
+.section_main {
+  @include media-min(("tablet-large")) {
+    margin-top: 300px;
+
+    .formation_globalwrapper {
+      width: 80%;
+    }
+
+    .instructor_imgbox {
+      position: absolute;
+      left: 0;
+    }
+  }
+}
+
+.section_main {
+  @include media-min(("desktop")) {
+    .formation_globalwrapper {
+      width: 900px;
+    }
+
+    .instructor_img {
+      margin-left: 0px;
+    }
+  }
+}

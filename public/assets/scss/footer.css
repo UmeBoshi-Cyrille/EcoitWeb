@@ -1,0 +1,124 @@
+footer,
+.ft_wrapper,
+.ft_head,
+.ft_main,
+.ft_main-contain,
+.ft_list-text,
+.ft_legs,
+.ft_footer,
+.ft_p {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: auto;
+  width: 100%;
+}
+
+footer,
+.ft_wrapper,
+.ft_head,
+.ft_main,
+.ft_main-contain,
+.ft_list-text,
+.ft_legs,
+.ft_footer,
+.ft_p {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+footer,
+.ft_wrapper,
+.ft_head,
+.ft_main,
+.ft_main-contain,
+.ft_list-text,
+.ft_legs,
+.ft_footer,
+.ft_p {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+footer {
+  margin: auto 0;
+  border-top: 2px solid #57cc99;
+}
+
+footer .ft_main,
+footer .ft_footer {
+  padding: 50px 0 20px 0;
+}
+
+footer .ft_list-text a:hover {
+  border-bottom: 1px solid #0e0101;
+}
+
+footer .ft_legs {
+  padding-bottom: 50px;
+}
+
+footer .ft_footer {
+  -webkit-box-pack: flex_end;
+      -ms-flex-pack: flex_end;
+          justify-content: flex_end;
+  border-top: 2px solid #57cc99;
+}
+
+.ft_main,
+.ft_main-contain {
+  padding-top: 20px;
+}
+
+.ft_main .ft_main-contains,
+.ft_main-contain .ft_main-contains {
+  padding-top: 50px;
+}
+
+.ft_main .ft_list-text li,
+.ft_main-contain .ft_list-text li {
+  padding: 15px 0 15px 0;
+}
+
+.ft_footer .ft_line {
+  padding-bottom: 10px;
+  margin-bottom: 30px;
+  border-bottom: 1px solid;
+}
+
+@media screen and (min-width: 700px) {
+  .ft_wrapper {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .ft_wrapper .ft_head,
+  .ft_wrapper .ft_main,
+  .ft_wrapper .ft_legs {
+    width: 30%;
+  }
+  .ft_wrapper .ft_head,
+  .ft_wrapper .ft_logobox,
+  .ft_wrapper .ft_main,
+  .ft_wrapper .ft_footer {
+    margin: 0;
+  }
+  .ft_wrapper .ft_legs {
+    margin: 50px 0 0 0;
+  }
+  .ft_wrapper .ft_contains {
+    padding-top: 20px;
+  }
+}
+/*# sourceMappingURL=footer.css.map */

@@ -1,0 +1,192 @@
+@media screen and (min-width: 500px) {
+  main .home_head-box {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  main .home_aside-li {
+    position: relative;
+  }
+  main .home_li-indicator {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    width: 40px;
+    height: 20px;
+  }
+  main .home_li-text {
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+  main .home_li-h2 {
+    padding-top: 20px;
+    padding-bottom: 10px;
+  }
+  main .home_listlogo {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 80%;
+  }
+  main .partner-li {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  main article hr {
+    display: none;
+  }
+  main .home_head-box {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  main .home_head-title {
+    margin-right: 50px;
+  }
+  main .home_article-title,
+  main .home_article-wrap {
+    width: 100%;
+  }
+  main .home_article-title .home_article-img {
+    width: 100px;
+    height: 100px;
+  }
+  main .home_video-contain {
+    width: 500px;
+    height: 600px;
+  }
+  main .home_video-box {
+    padding-top: 50%;
+    width: 90%;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  main .home_main-wrapper {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  main .home_section-wrap {
+    margin-left: 20px;
+  }
+  main article,
+  main .home_head-box {
+    width: 500px;
+  }
+  main .home_article-title .home_article-img {
+    width: 200px;
+    height: 200px;
+  }
+  main .home_btn-wrap {
+    display: none;
+  }
+  main aside {
+    width: 500px;
+  }
+  main .img_box-lesson {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  main .home_aside-wrap {
+    width: 90%;
+  }
+  main .home_aside-box {
+    height: 150px;
+    width: 100px;
+  }
+  main .home_li-indicator {
+    width: 50px;
+    height: 30px;
+  }
+  main .home_video-contain {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    width: 800px;
+    height: 300px;
+  }
+  main .home_video-contain .home_video-box {
+    padding-top: 30%;
+    width: 45%;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  main .home_listlogo {
+    width: 70%;
+  }
+  main .home_section .home_partnerlogo {
+    width: 100px;
+    height: 100px;
+    margin: 0 10px 0 10px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  main .home_main-wrapper {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  main .home_section-wrap {
+    width: 50%;
+  }
+  main .home_head-box,
+  main article {
+    width: 100%;
+  }
+  main .home_video-contain {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    width: 950px;
+    height: 400px;
+  }
+  main .home_video-contain .home_video-box {
+    padding-top: 35%;
+    width: 50%;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  main .home_listlogo {
+    width: 60%;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  main .home_video-contain {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    width: 1190px;
+    height: 400px;
+  }
+  main .home_video-contain .home_video-box {
+    padding-top: 30%;
+    width: 40%;
+    margin-left: 60px;
+    margin-right: 60px;
+  }
+}
+/*# sourceMappingURL=home_states.css.map */

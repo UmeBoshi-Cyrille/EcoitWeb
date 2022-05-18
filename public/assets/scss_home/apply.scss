@@ -1,0 +1,206 @@
+$breakpoints: (
+  "phone": 500px,
+  "tablet": 700px,
+  "tablet-large": 900px,
+  "desktop": 1024px,
+  "desktop-large": 1200px,
+);
+
+section,
+form,
+.apply_wrapper,
+.apply_title,
+.apply_container,
+.img-box,
+.form_box,
+.cancel_box {
+  display: flex;
+}
+
+section,
+.apply_wrapper,
+.apply_title,
+.apply_container,
+.img-box {
+  justify-content: center;
+  align-items: center;
+}
+
+form {
+  justify-content: center;
+}
+
+.cancel_box {
+  align-items: center;
+}
+
+section,
+form,
+.apply_wrapper,
+.apply_container,
+.img-box,
+.form_box {
+  flex-direction: column;
+}
+
+section {
+  width: 100%;
+  padding-top: 50px;
+}
+
+.apply_h2 {
+  padding: 20px 0 20px 0;
+  font-size: 25px;
+}
+
+.apply_img {
+  width: 250px;
+  height: 250px;
+  margin: 10px 0 10px 0;
+  border-radius: 50%;
+}
+
+.apply_wrapper {
+  width: 90%;
+}
+
+.apply_title,
+.apply_container,
+.img-box,
+.form_box {
+  width: 100%;
+}
+
+form {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px 0 20px 0;
+}
+
+.input1 {
+  display: none;
+}
+
+input[type="email"],
+input[type="text"],
+input[type="password"],
+textarea,
+input[type="file"] {
+  width: 100%;
+  max-width: 100%;
+  margin-top: 5px;
+  margin: 5px auto 15px auto;
+  padding: 12px 0 12px 8px;
+  border: none;
+  box-sizing: border-box;
+  z-index: 0;
+}
+
+input[type="file"] {
+  margin-bottom: 20px;
+}
+
+.button_apply {
+  width: 80%;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.button_apply,
+.button_cancel {
+  padding: 15px 0 15px 0;
+  border: none;
+  border-radius: 50px;
+}
+
+.button_apply:hover,
+.button_cancel:hover {
+  opacity: 0.5;
+}
+
+@mixin media-max($_key) {
+  @media screen and(max-width: map-get($breakpoints, $_key)) {
+    & {
+      @content;
+    }
+  }
+}
+
+section {
+  @include media-max("phone") {
+    .cancel_box {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .button_cancel {
+      margin-right: auto;
+      margin-left: auto;
+    }
+
+    .button_cancel {
+      width: 70%;
+    }
+  }
+}
+
+@mixin media-min($_key) {
+  @media screen and(min-width: map-get($breakpoints, $_key)) {
+    & {
+      @content;
+    }
+  }
+}
+
+section {
+  @include media-min("phone") {
+    height: 1350px;
+
+    .apply_h2 {
+      font-size: 45px;
+    }
+
+    .apply_img {
+      width: 300px;
+      height: 300px;
+    }
+
+    .button_cancel {
+      width: 100px;
+    }
+  }
+}
+
+section {
+  @include media-min("tablet") {
+    height: 1400px;
+    padding-top: 100px;
+
+    .apply_h2 {
+      font-size: 50px;
+    }
+
+    .apply_img {
+      width: 400px;
+      height: 400px;
+    }
+  }
+}
+
+section {
+  @include media-min("tablet-large") {
+    padding-top: 150px;
+
+    .apply_wrapper {
+      max-width: 750px;
+    }
+
+    .apply_img {
+      width: 450px;
+      height: 400px;
+    }
+  }
+}

@@ -1,0 +1,207 @@
+$breakpoints: (
+  "phone": 500px,
+  "tablet": 700px,
+  "tablet-large": 900px,
+  "desktop": 1024px,
+  "desktop-large": 1200px,
+);
+
+section,
+form,
+.contact_wrapper,
+.contact_title,
+.contact_container,
+.img-box,
+.form_box,
+.cancel_box {
+  display: flex;
+}
+
+section,
+.contact_wrapper,
+.contact_title,
+.contact_container,
+.img-box {
+  justify-content: center;
+  align-items: center;
+}
+
+form {
+  justify-content: center;
+}
+
+.cancel_box {
+  align-items: center;
+}
+
+section,
+form,
+.contact_wrapper,
+.contact_container,
+.img-box,
+.form_box {
+  flex-direction: column;
+}
+
+section {
+  width: 100%;
+}
+
+.contact_h2 {
+  width: 90%;
+  text-align: center;
+  padding: 20px 0 20px 0;
+  font-size: 25px;
+  border-bottom: 1px solid;
+  border-top: 1px solid;
+}
+
+.contact_img {
+  width: 250px;
+  height: 250px;
+  margin: 10px 0 10px 0;
+  border-radius: 50%;
+}
+
+.contact_wrapper {
+  width: 90%;
+}
+
+.contact_title,
+.contact_container,
+.img-box,
+.form_box {
+  width: 100%;
+}
+
+form {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px 0 20px 0;
+}
+
+input[type="text"],
+input[type="password"],
+textarea,
+input[type="file"] {
+  width: 100%;
+  margin-top: 5px;
+  margin: 5px auto 15px auto;
+  padding: 12px 0 12px 8px;
+  border: none;
+  //   display: inline-block;
+  box-sizing: border-box;
+  z-index: 0;
+}
+
+.button_contact {
+  width: 80%;
+  margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.button_contact,
+.button_cancel {
+  padding: 15px 0 15px 0;
+  border: none;
+  border-radius: 50px;
+}
+
+.button_contact:hover,
+.button_cancel:hover {
+  opacity: 0.5;
+}
+
+.button_cancel {
+  margin-bottom: 20px;
+}
+
+@mixin media-max($_key) {
+  @media screen and(max-width: map-get($breakpoints, $_key)) {
+    & {
+      @content;
+    }
+  }
+}
+
+section {
+  @include media-max("phone") {
+    margin-top: 150px;
+    margin-bottom: 50px;
+
+    .cancel_box {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .button_cancel {
+      margin-right: auto;
+      margin-left: auto;
+    }
+
+    .button_cancel {
+      width: 70%;
+    }
+  }
+}
+
+@mixin media-min($_key) {
+  @media screen and(min-width: map-get($breakpoints, $_key)) {
+    & {
+      @content;
+    }
+  }
+}
+
+section {
+  @include media-min("phone") {
+    margin-top: 150px;
+    margin-bottom: 50px;
+
+    .contact_h2 {
+      font-size: 45px;
+    }
+
+    .contact_img {
+      width: 300px;
+      height: 300px;
+    }
+
+    .button_cancel {
+      width: 100px;
+    }
+  }
+}
+
+section {
+  @include media-min("tablet") {
+    margin-top: 150px;
+
+    .contact_h2 {
+      font-size: 50px;
+    }
+
+    .contact_img {
+      width: 400px;
+      height: 400px;
+    }
+  }
+}
+
+section {
+  @include media-min("tablet-large") {
+    padding-top: 100px;
+
+    .contact_wrapper {
+      max-width: 750px;
+    }
+
+    .contact_img {
+      width: 450px;
+      height: 400px;
+    }
+  }
+}

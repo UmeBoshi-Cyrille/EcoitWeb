@@ -1,0 +1,225 @@
+$breakpoints: (
+  "phone": 500px,
+  "tablet": 700px,
+  "tablet-large": 900px,
+  "desktop": 1024px,
+  "desktop-large": 1200px,
+);
+
+a {
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+/* ----- TEXT-SIZE VARIABLES ----- */
+
+$fontSize_xxl: 5em;
+$fontSize_xl4: 4.8em;
+$fontSize_xl3: 4.6em;
+$fontSize_xl2: 4.4em;
+$fontSize_xl1: 4.2em;
+$fontSize_xl: 4em;
+$fontSize_lg4: 3.8em;
+$fontSize_lg3: 3.6em;
+$fontSize_lg2: 3.4em;
+$fontSize_lg1: 3.2em;
+$fontSize_lg: 3em;
+$fontSize_md4: 2.8em;
+$fontSize_md3: 2.6em;
+$fontSize_md2: 2.4em;
+$fontSize_md1: 2.2em;
+$fontSize_md: 2em;
+$fontSize_sm4: 1.8em;
+$fontSize_sm3: 1.6em;
+$fontSize_sm2: 1.4em;
+$fontSize_sm1: 1.2em;
+$fontSize_sm: 1em;
+$fontSize_xs2: 0.9em;
+$fontSize_xs1: 0.7em;
+$fontSize_xs: 0.5em;
+
+/* ----- end TEXT VARIABLES ----- */
+
+//----- FONT VARIABLES -----
+
+// @font-face {
+//   font-family: Oxygen;
+//   src: url("fonts/Oxygen/Oxygen-Bold.ttf");
+// }
+
+// @font-face {
+//   font-family: Antic-Slab;
+//   src: url("fonts/Antic_Slab/AnticSlab-Regular.ttf");
+// }
+
+// @font-face {
+//   font-family: Raleway;
+//   src: url("fonts/Raleway/Raleway-Regular.ttf");
+// }
+
+$fontTitle: "Oxygen", sans-serif;
+$fontSubtitle: "Antic-Slab", sans-serif;
+$fontText: "Raleway", sans-serif;
+
+/* ----- end FONT VARIABLES ----- */
+
+/* ----- FONT FAMILY ----- */
+
+.font-f1 {
+  font-family: $fontTitle;
+}
+
+.font-f2 {
+  font-family: $fontSubtitle;
+}
+
+.font-f3 {
+  font-family: $fontText;
+}
+
+/* ----- end FONT FAMILY ----- */
+
+/* ----- FONT SIZE ----- */
+
+.home_head-h2 {
+  font-size: $fontSize_xl;
+}
+
+.home_partner-title,
+.login_h2,
+.subscribe_h2,
+.apply_h2 {
+  font-size: $fontSize_md;
+}
+
+.hd-li a,
+.home_head-h3,
+.home-btn,
+.home_aside-h2 {
+  font-size: $fontSize_sm2;
+}
+
+.home_article-h,
+.home_li-h2,
+.ft-listtext a,
+.ft-p,
+.formation_h3 {
+  font-size: $fontSize_sm1;
+}
+
+.home_partner-h3,
+.button_subscribe,
+.button_cancel,
+.ft-p2 {
+  font-size: $fontSize_xs2;
+}
+
+/* ----- end FONT SIZE ----- */
+
+/* ----- TEXT DECORATION ----- */
+
+.home_article-title,
+.home_partner-title {
+  text-decoration: underline;
+}
+
+.home_aside-h2,
+.home_li-h2,
+.home_partner-h3 {
+  font-weight: bold;
+}
+
+/* ----- end TEXT DECORATION ----- */
+
+/* ----- MEDIA QUERIES ----- */
+
+@mixin media-min($_key) {
+  @media screen and(min-width: map-get($breakpoints, $_key)) {
+    & {
+      @content;
+    }
+  }
+}
+
+body {
+  @include media-min(("phone")) {
+    .home_article-h {
+      font-size: $fontSize_sm3;
+    }
+  }
+}
+
+body {
+  @include media-min("tablet") {
+    .hd-li a {
+      font-size: $fontSize_sm;
+    }
+
+    header .nav_a {
+      font-size: $fontSize_sm1;
+      font-weight: bold;
+    }
+
+    .home_article-h {
+      font-size: $fontSize_md;
+    }
+  }
+}
+
+body {
+  @include media-min("tablet-large") {
+    .hd-title h1 {
+      font-size: $fontSize_md4;
+    }
+
+    .hd-dropdownContent li {
+      font-size: $fontSize_sm;
+    }
+
+    .home_section .home_partner-h3 {
+      font-size: $fontSize_sm;
+    }
+
+    .home_article-h {
+      font-size: $fontSize_md2;
+    }
+  }
+}
+
+body {
+  @include media-min("desktop") {
+    .home_section-h2 {
+      font-size: $fontSize_xxl;
+    }
+
+    .hd-title h1 {
+      font-size: $fontSize_md4;
+    }
+
+    .hd-title h2 {
+      font-size: $fontSize_sm1;
+      font-style: italic;
+    }
+  }
+}
+
+body {
+  @include media-min("desktop-large") {
+    .hd-title h1 {
+      font-size: $fontSize_md4;
+    }
+
+    .hd-title h2 {
+      font-size: $fontSize_sm3;
+    }
+
+    .home_section .home_partner-h3 {
+      font-size: $fontSize_sm1;
+    }
+  }
+}
+
+/* ----- end MEDIA QUERIES ----- */

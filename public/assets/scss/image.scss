@@ -1,0 +1,224 @@
+$breakpoints: (
+  "phone": 500px,
+  "tablet": 700px,
+  "tablet-large": 900px,
+  "desktop": 1054px,
+  "desktop-large": 1300px,
+);
+
+.hd_logobox,
+.hd_logobox a,
+.ft_logobox,
+.ft_listlogo {
+  display: flex;
+}
+
+.hd_logobox,
+.hd_logobox a,
+.ft_logobox,
+.ft_listlogo {
+  justify-content: center;
+}
+
+.hd_logobox,
+.hd_logobox a,
+.ft_logobox {
+  align-items: center;
+}
+
+.ft_listlogo {
+  margin: auto;
+  width: 100%;
+}
+
+.ft_listlogo {
+  flex-direction: row;
+}
+
+/* ----- LOGO BASE ----- */
+
+.hd_logobox {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  border-radius: 50%;
+  z-index: 4;
+}
+
+.ft_logobox {
+  margin: 50px 0 20px 0;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+}
+
+.ft_logo {
+  width: 150px;
+  height: 150px;
+}
+
+.ft_otherlogo {
+  width: 50px;
+  height: 50px;
+  margin: 10px;
+}
+
+/* ----- end LOGO BASE ----- */
+
+/* ----- ICONS BASE ----- */
+
+/* ----- end ICONS BASE ----- */
+
+/* ----- IMAGES BASE ----- */
+.ft_imgcertification {
+  width: 250px;
+  height: 250px;
+}
+/* ----- end IMAGES BASE ----- */
+
+/* ------ STATES ------ */
+
+@mixin media-max($_key) {
+  @media screen and(max-width: map-get($breakpoints, $_key)) {
+    & {
+      @content;
+    }
+  }
+}
+
+@mixin media-min($_key) {
+  @media screen and(min-width: map-get($breakpoints, $_key)) {
+    & {
+      @content;
+    }
+  }
+}
+
+body {
+  @include media-max("tablet") {
+    /* ----- LOGO BASE ----- */
+    .hd_logobox {
+      height: 80px;
+      width: 80px;
+    }
+
+    .hd_logo {
+      height: 65px;
+      width: 65px;
+    }
+
+    /* ----- end LOGO BASE ----- */
+
+    /* ----- ICONS BASE ----- */
+
+    /* ----- end ICONS BASE ----- */
+
+    /* ----- IMAGES BASE ----- */
+
+    /* ----- end IMAGES BASE ----- */
+  }
+}
+
+body {
+  @include media-min("phone") {
+    /* ----- LOGO ----- */
+    .hd_logobox {
+      height: 120px;
+      width: 120px;
+    }
+
+    .hd_logo {
+      height: 100px;
+      width: 100px;
+    }
+
+    /* ----- end LOGO ----- */
+
+    /* ----- ICONS ----- */
+
+    /* ----- end ICONS ----- */
+
+    /* ----- IMAGES ----- */
+
+    /* ----- end IMAGES ----- */
+  }
+}
+
+body {
+  @include media-min("tablet") {
+    /* ----- LOGO ----- */
+    .hd_logobox {
+      height: 120px;
+      width: 120px;
+    }
+
+    .hd_logo {
+      height: 100px;
+      width: 100px;
+    }
+
+    .ft_logobox {
+      height: 150px;
+      width: 150px;
+    }
+
+    .ft_logo {
+      height: 120px;
+      width: 120px;
+    }
+
+    /* ----- end LOGO ----- */
+
+    /* ----- ICONS ----- */
+
+    /* ----- end ICONS ----- */
+
+    /* ----- IMAGES ----- */
+    .ft_imgcertification {
+      width: 150px;
+      height: 150px;
+    }
+    /* ----- end IMAGES ----- */
+  }
+}
+
+body {
+  @include media-min("tablet-large") {
+    /* ----- LOGO ----- */
+    .hd_logobox {
+      top: 20px;
+      left: 20px;
+      height: 170px;
+      width: 170px;
+    }
+
+    .hd_logo {
+      height: 150px;
+      width: 150px;
+    }
+
+    .ft_logobox {
+      height: 250px;
+      width: 250px;
+    }
+
+    .ft_logo {
+      height: 200px;
+      width: 200px;
+    }
+    /* ----- end LOGO ----- */
+
+    /* ----- ICONS ----- */
+
+    /* ----- end ICONS ----- */
+
+    /* ----- IMAGES ----- */
+    .ft_imgcertification {
+      height: 250px;
+      width: 250px;
+    }
+    /* ----- end IMAGES ----- */
+  }
+}
+
+/* ------ end STATES ------ */

@@ -1,0 +1,174 @@
+/* ----- COLOR VARIABLES ----- */
+.theme-light {
+  --bg-key1: #c7f9cc;
+  --bg-key2: #80ed99;
+  --bg-key3: #57cc99;
+  --bg-key4: #38a3a5;
+  --bg-key5: #22577a;
+  --bg-key6: #daaf8b;
+  --bg-key7: #af3838;
+  --bg-whitedark: #edf6f9;
+  --bg-darkwhite: #222324;
+  --font-darkwhite: #00070a;
+  --font-whitedark: #edf6f9;
+}
+
+.theme-dark {
+  --bg-key1: #445f46;
+  --bg-key2: #394b43;
+  --bg-key3: #244749;
+  --bg-key4: #143246;
+  --bg-key5: #2e5169;
+  --bg-key6: #8f6441;
+  --bg-key7: #af3838;
+  --bg-whitedark: #222324;
+  --bg-darkwhite: #edf6f9;
+  --font-darkwhite: #edf6f9;
+  --font-whitedark: #00070a;
+}
+
+.theme-unique {
+  --bg-keyA: #445f46;
+  --bg-keyB: #394b43;
+  --bg-keyC: #244749;
+  --bg-keyD: #143246;
+  --bg-keyE: #2e5169;
+  --bg-keyF: #8f6441;
+  --bg-keyG: #884d4d;
+}
+
+/* ----- end COLOR VARIABLES ----- */
+/* ----- COLOR BG CLASS ----- */
+.key_bg1 {
+  background-color: var(--bg-key1);
+}
+
+.key_bg2 {
+  background-color: var(--bg-key2);
+}
+
+.key_bg3 {
+  background-color: var(--bg-key3);
+}
+
+.key_bg4 {
+  background-color: var(--bg-key4);
+}
+
+.key_bg5 {
+  background-color: var(--bg-key5);
+}
+
+.key_bg6 {
+  background-color: var(--bg-key6);
+}
+
+.key_bgwd {
+  background-color: var(--bg-whitedark);
+}
+
+.key_bgdw {
+  background-color: var(--bg-darkwhite);
+}
+
+.key_bgA {
+  background-color: var(--bg-keyA);
+}
+
+.key_bgblack {
+  background-color: #0e0101;
+}
+
+.key_bgC {
+  background-color: var(--bg-keyC);
+}
+
+.key_bggreen {
+  background-color: #448d1a;
+}
+
+.key_bgred {
+  background-color: #af3838;
+}
+
+/* ----- end COLOR BG CLASS ----- */
+/* ----- COLOR FONT CLASS ----- */
+.key_ftw {
+  color: #edf6f9;
+}
+
+.key_ftd {
+  color: #0e0101;
+}
+
+.key_ftwd {
+  color: var(--font-whitedark);
+}
+
+.key_ftdw {
+  color: var(--font-darkwhite);
+}
+
+/* ----- end COLOR FONT CLASS ----- */
+/* ----- COLOR BORDER ----- */
+.hd-switch {
+  border: 2px solid var(--bg-key3);
+}
+
+.hd-navbtn,
+.home-btn {
+  border: var(--bg-key2);
+}
+
+.preview_button {
+  border: 2px solid var(--bg-key2);
+}
+
+.home_li-img {
+  border: 2px solid var(--bg-darkwhite);
+}
+
+.aside-wrapper {
+  border: 2px dashed var(--bg-key3);
+}
+
+.ft-footer {
+  border-top: 2px solid var(--bg-key3);
+}
+
+/* ----- end COLOR BORDER ----- */
+/* ----- COLOR STATES ----- */
+.home-btnbox:hover {
+  background-color: var(--bg-key2);
+}
+
+@media screen and (max-width: 700px) {
+  body header .right:hover {
+    border-right: 1px solid var(--bg-whitedark);
+  }
+  body header .left:hover {
+    border-left: 1px solid var(--bg-whitedark);
+  }
+  body .hd-dropdownContent {
+    background-color: var(--bg-key3);
+  }
+}
+
+@media screen and (min-width: 700px) {
+  body .hd-navdropdown {
+    background-color: var(--bg-key3);
+  }
+  body .hd-homeli:hover {
+    border: 1px solid var(--bg-darkwhite);
+    background-color: #38a3a5;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  body .hd-navdropdown {
+    background-color: var(--bg-key3);
+  }
+}
+
+/* ----- end COLOR STATES ----- */
+/*# sourceMappingURL=color.css.map */

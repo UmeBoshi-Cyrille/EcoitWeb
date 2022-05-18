@@ -1,0 +1,135 @@
+a {
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+/* ----- TEXT-SIZE VARIABLES ----- */
+/* ----- end TEXT VARIABLES ----- */
+/* ----- end FONT VARIABLES ----- */
+/* ----- FONT FAMILY ----- */
+.font-f1 {
+  font-family: "Oxygen", sans-serif;
+}
+
+.font-f2 {
+  font-family: "Antic-Slab", sans-serif;
+}
+
+.font-f3 {
+  font-family: "Raleway", sans-serif;
+}
+
+/* ----- end FONT FAMILY ----- */
+/* ----- FONT SIZE ----- */
+.home_head-h2 {
+  font-size: 4em;
+}
+
+.home_partner-title,
+.login_h2,
+.subscribe_h2,
+.apply_h2 {
+  font-size: 2em;
+}
+
+.hd-li a,
+.home_head-h3,
+.home-btn,
+.home_aside-h2 {
+  font-size: 1.4em;
+}
+
+.home_article-h,
+.home_li-h2,
+.ft-listtext a,
+.ft-p,
+.formation_h3 {
+  font-size: 1.2em;
+}
+
+.home_partner-h3,
+.button_subscribe,
+.button_cancel,
+.ft-p2 {
+  font-size: 0.9em;
+}
+
+/* ----- end FONT SIZE ----- */
+/* ----- TEXT DECORATION ----- */
+.home_article-title,
+.home_partner-title {
+  text-decoration: underline;
+}
+
+.home_aside-h2,
+.home_li-h2,
+.home_partner-h3 {
+  font-weight: bold;
+}
+
+/* ----- end TEXT DECORATION ----- */
+/* ----- MEDIA QUERIES ----- */
+@media screen and (min-width: 500px) {
+  body .home_article-h {
+    font-size: 1.6em;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  body .hd-li a {
+    font-size: 1em;
+  }
+  body header .nav_a {
+    font-size: 1.2em;
+    font-weight: bold;
+  }
+  body .home_article-h {
+    font-size: 2em;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  body .hd-title h1 {
+    font-size: 2.8em;
+  }
+  body .hd-dropdownContent li {
+    font-size: 1em;
+  }
+  body .home_section .home_partner-h3 {
+    font-size: 1em;
+  }
+  body .home_article-h {
+    font-size: 2.4em;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  body .home_section-h2 {
+    font-size: 5em;
+  }
+  body .hd-title h1 {
+    font-size: 2.8em;
+  }
+  body .hd-title h2 {
+    font-size: 1.2em;
+    font-style: italic;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  body .hd-title h1 {
+    font-size: 2.8em;
+  }
+  body .hd-title h2 {
+    font-size: 1.6em;
+  }
+  body .home_section .home_partner-h3 {
+    font-size: 1.2em;
+  }
+}
+
+/* ----- end MEDIA QUERIES ----- */
+/*# sourceMappingURL=txt.css.map */

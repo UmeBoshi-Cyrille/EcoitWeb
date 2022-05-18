@@ -1,0 +1,346 @@
+.section_section,
+.section_headsection,
+.section_headOne,
+.head_image,
+.section_mainsection,
+.sections_side,
+.section_wrapper,
+.sectionForm,
+.sectionForm div,
+.form_wrap,
+.form_wrap div,
+.panel_section,
+.panel_sectionWrap,
+.lesson_panel,
+.panel_lessonWrap,
+.lesson_wrap,
+.lesson_wrap div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.section_section,
+.section_headsection,
+.section_headOne,
+.section_mainsection,
+.sections_side,
+.section_wrapper,
+.sectionForm,
+.sectionForm div,
+.form_wrap,
+.panel_section,
+.panel_sectionWrap,
+.lesson_panel,
+.panel_lessonWrap {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.section_section,
+.section_headsection,
+.section_headOne,
+.head_image,
+.section_mainsection,
+.sections_side,
+.section_wrapper,
+.sectionForm,
+.form_wrap,
+.panel_section,
+.panel_sectionWrap,
+.lesson_panel,
+.panel_lessonWrap {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.section_section,
+.section_headsection,
+.section_headOne,
+.head_image,
+.section_mainsection,
+.sections_side,
+.section_wrapper,
+.sectionForm,
+.form_wrap,
+.panel_section,
+.panel_sectionWrap,
+.lesson_panel,
+.panel_lessonWrap {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.form_wrap div,
+.lesson_wrap div {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.section_section,
+.section_headOne,
+.section_mainsection,
+.section_wrapper,
+.panel_section,
+.panel_sectionWrap,
+.sectionForm div {
+  width: 100%;
+}
+
+.section_section {
+  margin-top: 120px;
+}
+
+.section_headsection,
+.sections_side,
+.sectionForm {
+  width: 95%;
+}
+
+/* ------- SECTION HEAD ------ */
+.section_headsection {
+  margin-bottom: 20px;
+}
+
+.section_headOne {
+  text-align: center;
+  padding: 20px;
+}
+
+.section_headOne .section_title {
+  margin-bottom: 20px;
+  font-size: 30px;
+}
+
+.head_image {
+  width: 200px;
+  height: 200px;
+}
+
+.section_sectionImg {
+  width: 100%;
+  height: 100%;
+}
+
+/* ------- end SECTION HEAD ------ */
+/* ------- SECTION MAIN ------ */
+.section_mainsection {
+  padding: 20px 0 20px 0;
+}
+
+.section_mainsection .sections_side {
+  padding: 20px 0 20px 0;
+}
+
+.section_mainsection .section_wrapper {
+  padding: 20px 0 20px 0;
+}
+
+.section_mainsection input[type="text"],
+.section_mainsection textarea,
+.section_mainsection input[type="date"],
+.section_mainsection .category {
+  margin: 5px 0 15px 0;
+  padding: 8px;
+  border: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  z-index: 0;
+}
+
+.section_mainsection input[type="text"],
+.section_mainsection textarea {
+  width: 100%;
+  max-width: 100%;
+}
+
+.section_mainsection input[type="date"],
+.section_mainsection .category {
+  width: 150px;
+}
+
+.section_mainsection .section_button {
+  width: 200px;
+  height: 50px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  border: none;
+  border-radius: 10px;
+  -webkit-box-shadow: 1px 1px 6px black;
+          box-shadow: 1px 1px 6px black;
+  background-color: #38a3a5;
+}
+
+.section_mainsection .path_return {
+  font-size: 25px;
+}
+
+/* ------- end SECTION MAIN ------ */
+/* ----- PANEL ----- */
+.panel_section {
+  margin-top: 20px;
+}
+
+.panel_section .panel_footer,
+.panel_section .panel_lessonFooter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.panel_section .panel_lessonHead,
+.panel_section .panel_footer {
+  width: 100%;
+}
+
+.panel_section .panel_heading,
+.panel_section .panel_body,
+.panel_section .panel_lessonBody,
+.panel_section .panel_lessonFooter {
+  width: 90%;
+}
+
+.panel_section .panel_footer,
+.panel_section .panel_lessonFooter {
+  height: 75px;
+  padding: 10px 0 10px 0;
+}
+
+.panel_section .panel_lessonFooter {
+  margin: 10px 0 20px 0;
+}
+
+.panel_section .btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  margin: 10px;
+  -webkit-box-shadow: 1px 1px 6px black;
+          box-shadow: 1px 1px 6px black;
+}
+
+.panel_section .btn img {
+  width: 45px;
+  height: 45px;
+}
+
+.panel_section .btnAddSection,
+.panel_section .btnRemoveSection {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.panel_sectionWrap {
+  -webkit-box-shadow: 1px 1px 6px #0e0101;
+          box-shadow: 1px 1px 6px #0e0101;
+  border: 2px solid #57cc99;
+  padding-top: 10px;
+}
+
+.panel_lessonWrap {
+  -webkit-box-shadow: inset 1px 1px 6px #0e0101;
+          box-shadow: inset 1px 1px 6px #0e0101;
+}
+
+.panel_sectionWrap .lesson_panel,
+.panel_lessonWrap .lesson_panel {
+  padding: 20px 20px 20px 20px;
+}
+
+.panel_sectionWrap .panel_heading,
+.panel_lessonWrap .panel_heading {
+  margin: 0 0 20px 0;
+  padding: 10px 0 10px 0;
+}
+
+.panel_sectionWrap .section_h2,
+.panel_lessonWrap .section_h2 {
+  margin-left: 10px;
+  font-size: 30px;
+}
+
+.panel_sectionWrap .panel_lessonHead,
+.panel_lessonWrap .panel_lessonHead {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.panel_sectionWrap .lesson_h3,
+.panel_lessonWrap .lesson_h3 {
+  padding-left: 20px;
+  font-size: 25px;
+}
+
+.panel_sectionWrap .panel_lessonHead,
+.panel_lessonWrap .panel_lessonHead {
+  padding: 20px 0 20px 0;
+}
+
+/* ----- end PANEL ----- */
+@media screen and (min-width: 500px) {
+  .section_section {
+    margin-top: 150px;
+  }
+  .section_section .section_title {
+    font-size: 40px;
+  }
+  .section_section .head_image {
+    width: 250px;
+    height: 250px;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .section_section .section_title {
+    font-size: 45px;
+  }
+  .section_section .head_image {
+    width: 300px;
+    height: 300px;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .section_section {
+    margin-top: 200px;
+  }
+  .section_section .section_title {
+    font-size: 50px;
+  }
+  .section_section .head_image {
+    width: 400px;
+    height: 400px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .section_mainsection .sections_side {
+    width: 1000px;
+  }
+}
+/*# sourceMappingURL=instructor_sections.css.map */

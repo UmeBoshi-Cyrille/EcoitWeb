@@ -1,0 +1,301 @@
+$breakpoints: (
+  "phone": 500px,
+  "tablet": 700px,
+  "tablet-large": 900px,
+  "desktop": 1024px,
+  "desktop-large": 1200px,
+);
+
+.section_head,
+.formation_headwrapper,
+.formation_pagetitle,
+.searchbar,
+.button_search,
+.btnCreate,
+.section_main,
+.formation_globalwrapper,
+.formation_container,
+.formation_title,
+.instructor_imgbox,
+.instructor_buttons,
+.instructor_buttons a {
+  display: flex;
+}
+
+.section_head,
+.formation_headwrapper,
+.section_main,
+.formation_globalwrapper,
+.formation_title {
+  flex-direction: column;
+}
+
+.formation_container {
+  flex-direction: row-reverse;
+}
+
+.section_head,
+.formation_headwrapper,
+.formation_pagetitle,
+.searchbar,
+.button_search,
+.btnCreate,
+.section_main,
+.formation_globalwrapper,
+.formation_container,
+.instructor_imgbox,
+.instructor_buttons,
+.instructor_buttons a {
+  align-items: center;
+}
+
+.formation_pagetitle,
+.searchbar,
+.button_search,
+.btnCreate,
+.instructor_imgbox,
+.instructor_buttons,
+.instructor_buttons a {
+  justify-content: center;
+}
+
+.section_head,
+.section_main,
+.formation_pagetitle,
+.searchbar,
+.section_main,
+.formation_container {
+  width: 100%;
+}
+
+.formation_headwrapper,
+.formation_globalwrapper {
+  width: 90%;
+}
+
+/* ----- SECTION HEAD ----- */
+
+.section_head {
+  height: 200px;
+  margin-top: 100px;
+  padding-top: 40px;
+  margin-bottom: 100px;
+  background: url("../storage/image/planet.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+
+  .formation_headwrapper {
+    margin-top: 50px;
+  }
+
+  .formation_pagetitle {
+    padding-bottom: 100px;
+  }
+
+  .searchbar {
+    margin-top: 30px;
+  }
+
+  .input_searchtext {
+    width: 70%;
+    padding: 7px 10px 7px 10px;
+    border-radius: 50px;
+  }
+
+  .button_search,
+  .btnCreate {
+    height: 40px;
+    width: 40px;
+    margin-left: 5px;
+    border-radius: 50%;
+  }
+
+  .search_icon {
+    height: 30px;
+    width: 30px;
+  }
+
+  .btnCreate {
+    border: 1px solid black;
+    transition: 0.3s ease;
+  }
+
+  .btnCreate:hover {
+    transform: scale(1.1);
+    z-index: 1;
+  }
+
+  .btnCreate img {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+/* ----- end SECTION HEAD ----- */
+
+/* ----- SECTION MAIN ----- */
+
+.section_main {
+  margin-bottom: 50px;
+
+  .formation_globalwrapper {
+    transition: 0.3s ease;
+    margin-bottom: 30px;
+  }
+
+  .formation_globalwrapper:hover {
+    transform: scale(1.02);
+  }
+
+  .formation_container {
+    position: relative;
+    height: 150px;
+    width: 100%;
+    box-shadow: 1px 1px 6px #000;
+    cursor: pointer;
+  }
+
+  .formation_title {
+    height: 100%;
+    width: 100%;
+  }
+
+  .formation_h3 {
+    padding-top: 30px;
+    padding-bottom: 10px;
+  }
+
+  .instructor_imgbox {
+    height: 100%;
+    width: 100px;
+    margin-right: 20px;
+  }
+
+  .instructor_img {
+    width: 80px;
+    height: 100px;
+    margin-left: 10px;
+    border: 1px solid;
+  }
+
+  .instructor_buttons {
+    position: absolute;
+    right: 0;
+    bottom: -32px;
+    width: 160px;
+    height: 30px;
+  }
+
+  .instructor_buttons a {
+    width: 40px;
+    height: 30px;
+    border: 1px solid;
+    transition: 0.3s ease;
+  }
+
+  .instructor_buttons a:hover {
+    transform: scale(1.1);
+  }
+
+  .instructor_buttons img {
+    width: 25px;
+    height: 25px;
+  }
+}
+
+/* ----- end SECTION MAIN ----- */
+
+@mixin media-min($_key) {
+  @media screen and(min-width: map-get($breakpoints, $_key)) {
+    & {
+      @content;
+    }
+  }
+}
+
+.section_head,
+.section_main {
+  @include media-min(("phone")) {
+    .formation_title {
+      height: 100%;
+      width: 80%;
+    }
+
+    .formation_h2 {
+      font-size: 35px;
+    }
+
+    .formation_h3 {
+      font-size: 25px;
+    }
+
+    .instructor_imgbox {
+      width: 140px;
+    }
+
+    .instructor_img {
+      width: 110px;
+      height: 130px;
+      margin-left: 5px;
+    }
+  }
+}
+
+.section_head {
+  @include media-min(("tablet")) {
+    margin-top: 120px;
+  }
+}
+
+.section_head {
+  @include media-min(("tablet-large")) {
+    margin-top: 170px;
+
+    .searchbar {
+      width: 40%;
+    }
+  }
+}
+
+.section_main {
+  @include media-min(("tablet")) {
+    .formation_h3 {
+      font-size: 35px;
+    }
+  }
+}
+
+.section_main {
+  @include media-min(("tablet-large")) {
+    .formation_globalwrapper {
+      width: 80%;
+    }
+
+    .instructor_imgbox {
+      position: absolute;
+      left: 0;
+    }
+
+    .instructor_buttons {
+      bottom: 10px;
+      right: 10px;
+    }
+
+    .instructor_buttons a {
+      background-color: #57cc99;
+    }
+  }
+}
+
+.section_main {
+  @include media-min(("desktop")) {
+    .formation_globalwrapper {
+      width: 900px;
+    }
+
+    .instructor_img {
+      margin-left: 0px;
+    }
+  }
+}

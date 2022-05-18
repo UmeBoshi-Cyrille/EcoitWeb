@@ -1,0 +1,297 @@
+$breakpoints: (
+  "phone": 500px,
+  "tablet": 700px,
+  "tablet-large": 900px,
+  "desktop": 1024px,
+  "desktop-large": 1200px,
+);
+
+.section_head,
+.formation_headwrapper,
+.formation_pagetitle,
+.searchbar,
+.button_search,
+.section_main,
+.formation_globalwrapper,
+.formation_container,
+.formation_title,
+.instructor_imgbox,
+.instructor_img,
+.instructor_buttons,
+._button {
+  display: flex;
+}
+
+.section_head,
+.formation_headwrapper,
+.section_main,
+.formation_globalwrapper,
+.formation_title {
+  flex-direction: column;
+}
+
+.formation_container {
+  flex-direction: row-reverse;
+}
+
+.section_head,
+.formation_headwrapper,
+.formation_pagetitle,
+.searchbar,
+.button_search,
+.section_main,
+.formation_globalwrapper,
+.formation_container,
+.instructor_img,
+.instructor_buttons,
+._button {
+  align-items: center;
+}
+
+.instructor_imgbox {
+  align-items: flex-start;
+}
+
+.formation_pagetitle,
+.searchbar,
+.button_search,
+.instructor_imgbox,
+.instructor_img,
+.instructor_buttons,
+._button {
+  justify-content: center;
+}
+
+.section_head,
+.section_main,
+.formation_pagetitle,
+.searchbar,
+.section_main,
+.formation_container {
+  width: 100%;
+}
+
+.formation_headwrapper,
+.formation_globalwrapper {
+  width: 90%;
+}
+
+/* ----- SECTION HEAD ----- */
+
+.section_head {
+  height: 200px;
+  margin-top: 100px;
+  padding-top: 40px;
+  margin-bottom: 100px;
+  background: url("../storage/image/planet.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+
+  .formation_headwrapper {
+    margin-top: 50px;
+  }
+
+  .formation_pagetitle {
+    padding-bottom: 100px;
+  }
+
+  .searchbar {
+    margin-top: 30px;
+  }
+
+  .input_searchtext {
+    width: 70%;
+    padding: 7px 10px 7px 10px;
+    border-radius: 50px;
+  }
+
+  .button_search {
+    height: 40px;
+    width: 40px;
+    margin-left: 5px;
+    border-radius: 50%;
+  }
+
+  .search_icon {
+    height: 30px;
+    width: 30px;
+  }
+}
+
+/* ----- end SECTION HEAD ----- */
+
+/* ----- SECTION MAIN ----- */
+
+.section_main {
+  margin-bottom: 50px;
+}
+
+.section_main {
+  .formation_globalwrapper {
+    position: relative;
+    transition: 0.3s ease;
+    margin-bottom: 30px;
+  }
+
+  .formation_globalwrapper:hover {
+    transform: scale(1.02);
+  }
+
+  .formation_container {
+    position: relative;
+    height: 170px;
+    width: 100%;
+    box-shadow: 1px 1px 6px #000;
+    cursor: pointer;
+  }
+
+  .formation_title {
+    height: 100%;
+    width: 100%;
+  }
+
+  .formation_h3 {
+    padding-top: 30px;
+    padding-bottom: 10px;
+  }
+
+  .instructor_imgbox {
+    height: 100%;
+    width: 100px;
+    margin-right: 20px;
+  }
+
+  .instructor_img {
+    width: 80px;
+    height: 100px;
+    margin-top: 20px;
+    margin-left: 10px;
+    border: 1px solid;
+    text-align: center;
+  }
+
+  .instructor_buttons {
+    position: absolute;
+    right: 5px;
+    bottom: 5px;
+  }
+
+  ._button {
+    border: 1px solid;
+    transition: 0.3s ease;
+  }
+
+  ._button:hover {
+    transform: scale(1.1);
+  }
+
+  ._button img,
+  img {
+    width: 25px;
+    height: 25px;
+  }
+
+  ._button {
+    width: 40px;
+    height: 30px;
+  }
+}
+
+/* ----- end SECTION MAIN ----- */
+
+@mixin media-min($_key) {
+  @media screen and(min-width: map-get($breakpoints, $_key)) {
+    & {
+      @content;
+    }
+  }
+}
+
+.section_head,
+.section_main {
+  @include media-min(("phone")) {
+    .formation_container {
+      height: 150px;
+    }
+
+    .formation_title {
+      height: 100%;
+      width: 80%;
+    }
+
+    .formation_h2 {
+      font-size: 35px;
+    }
+
+    .formation_h3 {
+      font-size: 25px;
+    }
+
+    .instructor_imgbox {
+      align-items: center;
+      width: 140px;
+    }
+
+    .instructor_img {
+      width: 110px;
+      height: 130px;
+      margin-left: 5px;
+      margin-top: 0;
+    }
+  }
+}
+
+.section_head {
+  @include media-min(("tablet")) {
+    margin-top: 120px;
+  }
+}
+
+.section_head {
+  @include media-min(("tablet-large")) {
+    margin-top: 170px;
+
+    .searchbar {
+      width: 40%;
+    }
+  }
+}
+
+.section_main {
+  @include media-min(("tablet")) {
+    .formation_h3 {
+      font-size: 35px;
+    }
+  }
+}
+
+.section_main {
+  @include media-min(("tablet-large")) {
+    .formation_globalwrapper {
+      width: 80%;
+    }
+
+    .instructor_imgbox {
+      position: absolute;
+      left: 0;
+    }
+
+    .instructor_buttons {
+      right: 10px;
+      bottom: 10px;
+    }
+  }
+}
+
+.section_main {
+  @include media-min(("desktop")) {
+    .formation_globalwrapper {
+      width: 900px;
+    }
+
+    .instructor_img {
+      margin-left: 0px;
+    }
+  }
+}
