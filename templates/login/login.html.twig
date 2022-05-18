@@ -1,0 +1,62 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Log in{% endblock %}
+{% block styleSheets %}
+    <link rel="stylesheet" href="{{ asset('assets/scss_home/login.css') }}">
+{% endblock %}
+
+{% block header %}
+    {% include "base/_header.html.twig" %}
+{% endblock %}
+
+{% block main %}
+    <section>
+        <div class="login_wrapper">
+            <div class="login_title-box key_bg2">
+                <h2 class="login_h2 key_ftdw font-f1">Connexion</h2>
+            </div>
+            <div class="login_container key_bg1">
+                <div class="login_img-box">
+                    <img class="login_img" 
+                         src="{{ asset('assets/storage/image/astronaut-profile.png') }}" 
+                         alt="astronaut"
+                         title="https://www.freepng.fr">
+                </div>
+                <div class="form_box key_bg3">
+                    <form method="post">
+                        {% if error %}
+                            <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+                        {% endif %}
+
+                        {# {% if app.user %}
+                            <div class="mb-3">
+                                Vous êtes connecté en tant que {{ app.user.userIdentifier }}, <a href="{{ path('logout') }}">Logout</a>
+                            </div>
+                        {% endif %} #}
+                        <label class ="key_ftdw font-f2" for="inputEmail"><strong>Email:</strong></label>
+                        <input type="email" value="{{ last_username }}" name="email" id="inputEmail" placeholder="Enter Email" autocomplete="email" required autofocus/>
+                        <label class ="key_ftdw font-f2" for="inputPassword"><strong>Password</strong></label>
+                        <input type="password" name="password" id="inputPassword" placeholder="Enter Password" autocomplete="current-password" required/>
+                        
+                        <input type="hidden" name="_csrf_token"
+                            value="{{ csrf_token('authenticate') }}"
+                        >
+                        {# Control Url user is redirected to on success 
+                        <input type="hidden" name="_target_path" value="/account"/> #}
+                        <button class="button_login key_ftw font-f3 key_bggreen" type="submit">Login</button>
+                        <label class="key_ftdw font-f2">
+                            <input class="checkbox" type="checkbox" checked="checked" name="remember"> Remember me
+                        </label>
+                    </form>
+                    <div class="cancel_box key_bg1">
+                        <form action="{{path('home')}}">
+                            <button class="button_cancel key_ftw font-f3 key_bgred" type="submit">Cancel</button>
+                        </form>
+                        <span class="span_password key_ftdw font-f3"><a class="key_ftd" href="{{ path('register')}}">S'inscrire</a></span>
+                        <span class="span_password key_ftdw font-f3">Forgot <a class="key_ftd" href="#">password ?</a></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

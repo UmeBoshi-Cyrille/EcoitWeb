@@ -1,0 +1,45 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Update Formation{% endblock %}
+{% block styleSheets %}
+    <link rel="stylesheet" href="{{ asset('assets/scss_instructor/instructor_formation.css') }}">
+{% endblock %}
+
+{% block header %}
+    {% include "base/_header.html.twig" %}
+{% endblock %}
+
+{% block main %}
+    <section class="formation_section">
+        <div class="formation_headsection">
+            <div class="formation_headOne">
+                <h2 class="formation_title key_ftdw font-f1">Nouvelle formation</h2>
+                <div class="head_image">
+                    <img class="formation_sectionImg" 
+                        src="{{ asset('assets/storage/image/astro-outer-space.png') }}" 
+                        alt="space"
+                        title="https://www.freepng.fr">
+                </div>
+            </div>
+        </div>
+        <div class="section_mainFormation key_bg3">
+            <div class="sections_side">
+                <div class="formation_wrapper">
+                    {{ form_start(formationUpdate,{'attr' : { 'class': 'formationForm key_ftdw font-f2'} }) }}
+                        {{ form_row(formationUpdate.title,{'attr' : { 'class': 'key_ftdw key_bgwd font-f2'} }) }}
+                        {{ form_row(formationUpdate.instructor,{'attr' : { 'class': 'key_ftdw key_bgwd font-f2'} } ) }}
+                        {{ form_row(formationUpdate.sentence,{'attr' : { 'class': 'key_ftdw key_bgwd font-f2'} } ) }}
+                        {{ form_row(formationUpdate.description,{'attr' : { 'class': 'key_ftdw key_bgwd font-f2'} } ) }}
+                        <div class="form_wrap">
+                            {{ form_row(formationUpdate.category,{'attr' : { 'class': 'category key_ftdw key_bgwd font-f2'} } ) }}
+                            {{ form_row(formationUpdate.publishedAt,{'attr' : { 'class': 'key_ftdw key_bgwd font-f2'} } ) }}
+                            {{ form_row(formationUpdate.isPublished,{'attr' : { 'class': 'key_ftdw key_bgwd font-f2'} } ) }}
+                        </div>
+                        <button class="formation_button key_ftdw" type="submit">Submit</button>
+                    {{ form_end(formationUpdate) }}
+                </div>
+                <a class="path_return key_ftdw font-f3" href="{{ path('instructor_formations_index') }}">back to list</a>  
+            </div>
+        </div>
+    </section>
+{% endblock %}

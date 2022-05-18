@@ -1,0 +1,52 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}apply{% endblock %}
+{% block styleSheets %}
+    <link rel="stylesheet" href="{{ asset('assets/scss_home/apply.css') }}">
+{% endblock %}
+
+{% block header %}
+    {% include "base/_header.html.twig" %}
+{% endblock %}
+
+{% block main %}
+
+    <section>
+        <div class="apply_wrapper">
+            <div class="apply_title key_bg2">
+                <h2 class="apply_h2 key_ftdw font-f1">Postuler</h2>
+            </div>
+            <div class="apply_container key_bg1">
+                <div class="img-box">
+                    <img class ="apply_img" 
+                         src="{{ asset('assets/storage/image/astronaut-outerspace.png') }}" 
+                         alt="astronaut outer-space"
+                         title="title="https://www.freepng.fr"">
+                </div>
+                <div class="form_box key_bg3">
+                    {{ form_start(applyForm, { 'attr' : { 'class': 'form' } }) }}
+                        {{ form_row(applyForm.name, { label: 'Name', 'attr' : { 'class': 'key_ftdw font-f2', 'placeholder': 'Nom', 'id' : 'name' } }) }}
+                        {{ form_row(applyForm.firstname, { label: 'Surname', 'attr' : { 'class': 'key_ftdw font-f2', 'placeholder': 'Prénom', 'id' : 'surname' } }) }}
+                        {{ form_row(applyForm.email, { label: 'Email', 'attr' : { 'class': 'key_ftdw font-f2', 'placeholder': 'Enter Email' } }) }}
+                        {{ form_row(applyForm.plainPassword, {
+                            label: 'Password', 
+                            'attr' : { 'class': 'input key_ftdw font-f2', 'placeholder': 'Enter password' } }) }}
+                        {# {{ form_row(applyForm.Rgpd-Consent) }} #}
+                        {{ form_row(applyForm.description, { label: 'Description', 'attr' : { 'class': 'key_ftdw font-f2', 'placeholder': 'Description' } }) }}
+                        {{ form_row(applyForm.imageFile, { label: 'Photo', 'attr' : { 'class': 'key_ftdw font-f2 key_bg1', 'placeholder': 'Photo Profil' } }) }}
+                        <button class="button_apply key_ftw font-f3 key_bggreen" type="submit">Postuler</button>
+                    {{ form_end(applyForm) }}
+                    <div class="cancel_box key_bg1">
+                        <form action="{{path('home')}}">
+                            <button class="button_cancel key_ftw font-f3 key_bgred" type="submit">Cancel</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}
+
+{% block javascripts %}
+    
+{% endblock %}

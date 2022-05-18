@@ -1,0 +1,39 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}home{% endblock %}
+{% block styleSheets %}
+    <link rel="stylesheet" href="{{ asset('assets/scss_instructor/home_instructor.css') }}">
+{% endblock %}
+
+{% block header %}
+    {% include "base/_header.html.twig" %}
+{% endblock %}
+
+{% block main %}
+
+    <section class="homeInstructor_section">
+        <div class="home_wrapper key_ftdw">
+            <div class="home_title">
+                <h2 class="home_h2 key_ftdw font-f1">Bienvenue cher instructeur !</h2>
+            </div>
+            <div class="home_container">
+                <div class="img-box">
+                        <img class ="home_img" 
+                            src="{{ asset('assets/storage/image/city.png') }}" 
+                            alt="Draw of a city at night"
+                            title="https://www.freepng.fr">
+                    </div>
+                <div class="home_box">
+                    <ul class="home_ul">
+                        {# <li><a class="home_a key_bgwd key_ftdw font-f2" href="{{path('instructor_home')}}">Accueil</a></li> #}
+                        <li><a class="home_a key_bgwd key_ftdw font-f2" href="{{path('instructor_formations_index')}}">Vos Formations</a></li>
+                        <li><a class="home_a key_bgwd key_ftdw font-f2" href="{{path('formation_new')}}">Créer une formation</a></li>
+                        {# <li><a class="home_a key_bgwd key_ftdw font-f2" href="{{path('section_new')}}">Créer une section</a></li> #}
+                        <li><a class="home_a1 a2 key_bgwd key_ftdw font-f2" href="{{path('home')}}">Se déconnecter</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+{% endblock %}

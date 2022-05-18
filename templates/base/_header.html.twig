@@ -1,0 +1,88 @@
+<div class="hd-head">
+    <div class="hd-title">
+        <h1 class="font-f1 key_ftdw">Eco-Tech Eco-Web</h1>
+        <h2 class="font-f1 key_ftdw">Les solutions web-écologique</h2>
+    </div>
+    <div class="hd_logobox key_bg3">
+        {% if is_granted('ROLE_ADMIN') %}
+            <a href="{{path('admin_home')}}"><img class="hd_logo" src="{{ asset('assets/storage/logo/ecoIt2.png') }}" alt="logo-ecoIt"></a> 
+        {% elseif is_granted('ROLE_INSTRUCTOR') %}
+            <a href="{{path('instructor_home')}}"><img class="hd_logo" src="{{ asset('assets/storage/logo/ecoIt2.png') }}" alt="logo-ecoIt"></a> 
+        {% else %}    
+            <a href="{{path('home')}}"><img class="hd_logo" src="{{ asset('assets/storage/logo/ecoIt2.png') }}" alt="logo-ecoIt"></a> 
+        {% endif %}
+    </div>
+</div>
+{% include "_modules/_switch.html.twig" %}
+<nav class="hd-navdropdown">
+    <button onclick="dropdownMenu()" id="nav-btn" class="hd-navbtn key_bg2" style="background-color: #c7f9cc" />
+        <div class="hd-iconNav headNav-icon1 key_bgdw"></div>
+        <div class="hd-iconNav headNav-icon2 key_bgdw"></div>
+        <div class="hd-iconNav headNav-icon3 key_bgdw"></div>
+    </button>
+    <ul id="dropdown" class="hd-dropdownContent">
+        <li class="hd-li1"></li>
+        {% if is_granted('ROLE_ADMIN') %}
+            <li class="hd-li right font-f1">
+                <a class="key_ftdw" href="{{path('admin_home')}}">Accueil</a>
+            </li>
+            <li class="hd-li left font-f1">
+                <a class="key_ftdw" href="{{path('admin_instructors')}}">Instructeurs</a>             
+            </li>
+            <li class="hd-li right font-f1">
+                <a class="key_ftdw" href="{{path('admin_students')}}">Apprenants</a>   
+            </li>
+            <li class="hd-li hd_home-li right font-f1 key_bg3">
+                <a class="nav_a key_ftdw" href="{{path('logout')}}">Déconnexion</a>              
+            </li>
+        {% elseif is_granted('ROLE_INSTRUCTOR') %}
+            <li class="hd-li left font-f1">
+            <a class="key_ftdw" href="{{path('instructor_home')}}">Accueil</a>             
+            </li>
+            <li class="hd-li right font-f1">
+                <a class="key_ftdw" href="{{path('instructor_formations_index')}}">Formations</a>
+            </li>
+            {# <li class="hd-li left font-f1">
+                <a class="key_ftdw" href="{{path('sections')}}">Sections</a>             
+            </li> #}
+            <li class="hd-li left font-f1">
+                <a class="key_ftdw" href="{{path('formation_new')}}">Formation</a>             
+            </li>
+            <li class="hd-li hd_home-li right font-f1 key_bg3">
+                <a class="nav_a key_ftdw" href="{{path('logout')}}">Déconnexion</a>              
+            </li>
+        {% elseif is_granted('ROLE_STUDENT') %}
+            <li class="hd-li right font-f1">
+            <a class="key_ftdw" href="{{path('student_formations')}}">Formations</a>
+            </li>
+            <li class="hd-li left font-f1">
+                <a class="key_ftdw" href="{{path('apply')}}">Postuler</a>             
+            </li>
+            <li class="hd-li right font-f1">
+                <a class="key_ftdw" href="{{path('contact')}}">Contact</a>   
+            </li>
+            <li class="hd-li left font-f1 key_bg3">
+                <a class="nav_a key_ftdw" href="{{path('student_account')}}">Compte</a>           
+            </li><hr>
+            <li class="hd-li hd_home-li right font-f1 key_bg3">
+                <a class="nav_a key_ftdw" href="{{path('logout')}}">Déconnexion</a>              
+            </li>
+        {% else %}
+            <li class="hd-li right font-f1">
+            <a class="key_ftdw" href="{{path('formations')}}">Formations</a>
+            </li>
+            <li class="hd-li left font-f1">
+                <a class="key_ftdw" href="{{path('apply')}}">Postuler</a>             
+            </li>
+            <li class="hd-li right font-f1">
+                <a class="key_ftdw" href="{{path('contact')}}">Contact</a>   
+            </li>
+            <li class="hd-li hd_home-li left font-f1 key_bg3">
+                <a class="nav_a key_ftdw" href="{{path('register')}}">S'incrire</a>           
+            </li><hr>
+            <li class="hd-li hd_home-li right font-f1 key_bg3">
+                <a class="nav_a key_ftdw" href="{{path('login')}}">Connexion</a>              
+            </li>
+        {% endif %}
+    </ul>
+</nav>

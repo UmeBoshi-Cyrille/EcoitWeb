@@ -1,0 +1,54 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Formations{% endblock %}
+{% block styleSheets %}
+    <link rel="stylesheet" href="{{ asset('assets/scss_admin/admin_update_instructor.css') }}">
+{% endblock %}
+
+{% block header %}
+    {% include "base/_header.html.twig" %}
+{% endblock %}
+
+{% block main %}
+    <section class="section_main">  
+            <div class="formation_globalwrapper">
+                <div class="formation_container key_bg2">
+                    <div class="formation_title">
+                        <h3 class="formation_h3 key_ftdw font-f1">{{instructor.name}} {{instructor.firstname}}</h3>
+                        <p class="key_ftdw font-f2">{{ instructor.email}}</p>
+                    </div>
+                    <div class="instructor_imgbox">
+                        <img class="instructor_img" src="{{ vich_uploader_asset(instructor, 'imageFile') }}" alt="{{ instructor.imageName }}">
+                    </div>
+                    <a class="delete_button key_bg3" href="{{ path('admin_instructor_delete', {'id': instructor.id}) }}">
+                        <img src="{{ asset('assets/storage/icons/corbeille.png') }}" 
+                            alt="icone poubelle" 
+                            title="icon by : https://icons8.com/icon/9deX0HJ5iAFS/poubelle">
+                    </a>
+                    <div class="instructor_choiceInput key_bg1">
+                        {{ form_start(instructorForm,{'attr' : { 'class': 'instructor_updateform key_ftdw font-f2'} }) }}
+                            <h4 class="updateFrom_h4">Activate account : </h4>
+                            {{ form_widget(instructorForm.roles,{'attr' : { 'class': 'instructor_input key_ftdw key_bgwd font-f2'} }) }}
+                            {{ form_rest(instructorForm) }}
+                            <button class="instructor_button-roles key_bg3" type="submit">></button>
+                        {{ form_end(instructorForm) }}
+                    </div>
+                </div>
+                <button class="preview_button key_bg3" 
+                        id="previewBtn" 
+                        onclick="dropdown(this)"
+                        style="background-color: #57cc99">
+                    <img src="{{ asset('assets/storage/icons/read.png') }}" 
+                        alt="icone livre ouvert" 
+                        title="icon by : https://icons8.com/icon/jlJLS7OQV1fO/lire">
+                </button>
+                <div class="preview-box key_bg1" id="preview_dropdown">
+                    <p class="preview_p key_ftdw font-f3">{{ instructor.description }}</p>
+                </div>
+            </div>        
+    </section>
+{% endblock %}
+
+{% block javascripts %}
+    <script src="{{ asset('assets/js/formations_visite.js') }}"></script>
+{% endblock %}

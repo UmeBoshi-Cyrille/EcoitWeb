@@ -1,19 +1,52 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text></svg>">
-        {# Run `composer require symfony/webpack-encore-bundle` to start using Symfony UX #}
-        {% block stylesheets %}
-            {{ encore_entry_link_tags('app') }}
-        {% endblock %}
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{{ asset('assets/css/reset.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/scss/header.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/scss/switch.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/scss/color.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/scss/txt.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/scss/image.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/scss/config.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/scss/footer.css') }}">
+    <style type="text/css">
+        @font-face {
+        font-family: Oxygen;
+        src: url({{asset('storage/fonts/Oxygen/Oxygen-Bold.ttf')}});
+        }
 
-        {% block javascripts %}
-            {{ encore_entry_script_tags('app') }}
-        {% endblock %}
-    </head>
-    <body>
-        {% block body %}{% endblock %}
-    </body>
+        @font-face {
+        font-family: Antic-Slab;
+        src: url({{asset('storage/fonts/Antic_Slab/AnticSlab-Regular.ttf')}});
+        }
+
+        @font-face {
+        font-family: Raleway;
+        src: url({{asset('storage/fonts/Raleway/Raleway-Regular.ttf')}})
+        }
+    </style>
+    {% block styleSheets %}{% endblock %}
+</head>
+<body class="light theme-light key_bgwd key_ftdw">
+    
+    <header class="key_bg1 z5">
+        {% block header %}{% endblock %}
+    </header>
+
+
+    <main>
+        {% block main %}{% endblock %}
+    </main>
+
+    <footer class="key_bg2 key_ftdw">
+        {% include "base/_footer.html.twig" %}
+    </footer>
+
+    <script src="{{ asset('assets/js/header.js') }}"></script>
+    {% block javascripts %}{% endblock %}
+</body>
 </html>

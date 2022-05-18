@@ -1,0 +1,104 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New Formation{% endblock %}
+{% block styleSheets %}
+    <link rel="stylesheet" href="{{ asset('assets/scss_instructor/instructor_formation.css') }}">
+{% endblock %}
+
+{% block header %}
+    {% include "base/_header.html.twig" %}
+{% endblock %}
+
+{% block main %}
+    <section class="formation_section">
+        <div class="formation_headsection">
+            <div class="formation_headOne">
+                <h2 class="formation_title key_ftdw font-f1">Nouvelle formation</h2>
+                <div class="head_image">
+                    <img class="formation_sectionImg" 
+                        src="{{ asset('assets/storage/image/astro-outer-space.png') }}" 
+                        alt="space"
+                        title="https://www.freepng.fr">
+                </div>
+            </div>
+        </div>
+        <div class="section_mainFormation key_bg3">
+            <div class="sections_side">
+                <div class="formation_wrapper">
+                    {{ form_start(formationNew,{'attr' : { 'class': 'formationForm key_ftdw font-f2'} }) }}
+                        {{ form_row(formationNew.title,{'attr' : { 'class': 'key_ftdw key_bgwd font-f2'} }) }}
+                        {{ form_row(formationNew.sentence,{'attr' : { 'class': 'key_ftdw key_bgwd font-f2'} } ) }}
+                        {{ form_row(formationNew.description,{'attr' : { 'class': 'key_ftdw key_bgwd font-f2'} } ) }}
+                        <div class="form_wrap">
+                            {{ form_row(formationNew.instructor,{'attr' : { 'class': 'category key_ftdw key_bgwd font-f2'} } ) }}
+                            {{ form_row(formationNew.category,{'attr' : { 'class': 'category key_ftdw key_bgwd font-f2'} } ) }}
+                            {{ form_row(formationNew.publishedAt,{'attr' : { 'class': 'key_ftdw key_bgwd font-f2'} } ) }}
+                            {{ form_row(formationNew.isPublished,{'attr' : { 'class': 'key_ftdw key_bgwd font-f2'} } ) }}
+                        </div>
+                        <div class="panel-section key_bg1" id="section_list" data-prototype="{{ form_widget(formationNew.sections.vars.prototype)|e('html_attr') }}">
+                            {% for section in formationNew.sections %}
+                                <div class="panel panel_sectionWrap key_bg2">
+                                    <div class="panel_heading">
+                                                <h3 class="lesson_h3">Section : <strong>{{ section.vars.value.title }}</strong></h3>
+                                            </div>
+                                    <div class="panel_body">
+                                        {{ form_row(section.title,{'attr' : { 'class': 'key_ftdw key_bgwd font-f2'} }) }}
+                                        {{ form_row(section.publishedAt,{'attr' : { 'class': 'key_ftdw key_bgwd font-f2'} }) }}
+                                    </div>
+                                </div>
+                                <div class="lesson_panel key_bg1" id="lesson_list" data-prototype="{{ form_widget(sectionForm.lessons.vars.prototype)|e('html_attr') }}">
+                                    {% for lesson in sectionForm.lessons %}
+                                        <div class="panel_lesson panel_lessonWrap">
+                                            <div class="panel_lessonHead">
+                                                <h3 class="lesson_h3">Lesson : <strong>{{ lesson.vars.value.title }}</strong></h3>
+                                            </div>
+                                            <div class="panel_lessonBody">
+                                                {{ form_row(lesson.title,{'attr' : { 'class': 'key_ftdw key_bgwd font-f2'} }) }}
+                                                {{ form_row(lesson.video,{'attr' : { 'class': 'key_ftdw key_bgwd font-f2'} }) }}
+                                                {{ form_row(lesson.content,{'attr' : { 'class': 'key_ftdw key_bgwd font-f2'} }) }}
+                                                <div class="lesson_wrap">
+                                                    {{ form_row(lesson.publishedAt,{'attr' : { 'class': 'key_ftdw key_bgwd font-f2'} }) }}
+                                                    {{ form_row(lesson.isPublished,{'attr' : { 'class': 'key_ftdw key_bgwd font-f2'} }) }}
+                                                </div>
+                                            </div>
+                                            <div class="panel_lessonFooter">
+                                                {# <button class="btn btnAddLesson key_bg1">
+                                                    <img src="{{ asset('assets/storage/icons/add.png') }}" 
+                                                        alt="icone ajouter" 
+                                                        title="icon by : https://icons8.com/icon/37839/ajouter">
+                                                </button> #}
+                                                {# <button class="btn btnRemoveLesson key_bg1">
+                                                    <img src="{{ asset('assets/storage/icons/minus.png') }}" 
+                                                        alt="icone ajouter" 
+                                                        title="icon by : https://icons8.com/icon/11206/moins">
+                                                </button> #}
+                                             </div>
+                                        </div>
+                                    {% endfor %}
+                                </div> 
+                            {% endfor %}
+                        </div>
+                        <button class="formation_button key_ftdw" type="submit">Submit</button>
+                    {{ form_end(formationNew) }}
+                </div>
+                <a class="path_return key_ftdw font-f3" href="{{ path('instructor_formations_index') }}">back to list</a>  
+            </div>
+        </div>
+    </section>
+{% endblock %}
+
+{% block javascripts %}
+   <script src="https://code.jquery.com/jquery-3.6.0.min.js" 
+            integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" 
+            crossorigin="anonymous">
+    </script>
+<<<<<<< HEAD
+<<<<<<< HEAD
+    <script src="{{ asset('assets/js/embededForms.js') }}"></script>
+=======
+    <script src="{{ asset('assets/js/formations.js') }}"></script>
+>>>>>>> parent of ae0f854 (last commit for ECF)
+=======
+    <script src="{{ asset('assets/js/formations.js') }}"></script>
+>>>>>>> parent of ae0f854 (last commit for ECF)
+{% endblock %}

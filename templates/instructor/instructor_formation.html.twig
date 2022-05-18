@@ -1,0 +1,85 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Formations{% endblock %}
+{% block styleSheets %}
+    <link rel="stylesheet" href="{{ asset('assets/scss_student/formation_student.css') }}">
+{% endblock %}
+
+{% block header %}
+    {% include "base/_header.html.twig" %}
+{% endblock %}
+
+{% block main %}
+    <section class="formation_section">
+        <div class="formation_headsection">
+            <div class="formation_headOne">
+                <h2 class="formation_title key_ftdw font-f1">{{ formation.title }}</h2>
+                <img class="formation_sectionImg" 
+                    src="{{ asset('assets/storage/image/astro-outer-space.png') }}" 
+                    alt="space"
+                    title="https://www.freepng.fr">
+            </div>
+            <div class="formation_headTwo">
+                <img class="formation_sectionImgTwo" 
+                    src="{{ asset('assets/storage/image/astronaut-moonwalk.png') }}" 
+                    alt="space"
+                    title="https://www.freepng.fr">
+            </div>
+        </div>
+        <div class="formation_mainWrapper">
+            <div class="lesson_displayside">
+                <div class="lesson_headbox key_bg1">
+                    <div class="section_titlebox">
+                        <h3 class="section_title font-f1">Titre de la section</h3>
+                    </div>
+                    <div class="span_authorbox">
+                        <span class="font-f3">Auteur: quelqu'un d'autre</span>
+                        <span class="span_author font-f3">Date: </span>
+                    </div>
+                </div>
+                <article class="lesson_article key_bg2">
+                    <h2 class="lesson_title font-f2">Titre de la leçon</h2>
+                    <div class="lesson_videoBox">
+                        <iframe class="lesson_video" 
+                                src="https://www.youtube.com/embed/6YMRB4bgQ-o" 
+                                title="YouTube video player" frameborder="0" 
+                                allow="accelerometer; autoplay; clipboard-write; 
+                                encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+                        </iframe>
+                    </div>
+                    <div class="lesson_articlep">
+                        <p></p>
+                    </div>
+                </article>
+            </div>
+            <div class="sections_side">
+                <div class="sections_wrapper">
+                    <div class="formations_sections">
+                        <button class="section_button key_bg2 key_ftdw" onclick="dropdownLessons()">
+                            <h3 class="section_h3 font-f1">Titre de le section</h3>
+                            <img class="section_buttonImg"  
+                                src="{{ asset('assets/storage/icons/gearPlanet.png') }}" 
+                                alt="rouages planète"
+                                title="icon by : https://icons8.com/icon/Qw0j4GWR9BWJ/gear">
+                        </button>
+                        <div class="formation_lesson" id="lessons_dropdown">
+                            <button class="lesson_button key_bg1 key_ftdw">
+                                <h3 class="lesson_h3 font-f2">Titre de la leçon</h3>
+                                <img class="lesson_buttonImg"  
+                                    src="{{ asset('assets/storage/icons/leaf.png') }}" 
+                                    alt="feuille"
+                                    title="icon by : https://icons8.com/icon/cyXR0oE7Vvwh/leaf">
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   
+{% endblock %}
+
+{% block javascripts %}
+    <script src="{{ asset('assets/js/formationStudent.js') }}"></script>
+{% endblock %}

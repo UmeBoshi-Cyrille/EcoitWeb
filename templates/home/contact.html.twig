@@ -1,0 +1,50 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}contact{% endblock %}
+{% block styleSheets %}
+    <link rel="stylesheet" href="{{ asset('assets/scss_home/contact.css') }}">
+{% endblock %}
+
+{% block header %}
+    {% include "base/_header.html.twig" %}
+{% endblock %}
+
+{% block main %}
+
+    <section>
+        <div class="contact_wrapper">
+            <div class="contact_title">
+                <h2 class="contact_h2 key_ftdw font-f1">Nous Contacter</h2>
+            </div>
+            <div class="contact_container ">
+                <div class="img-box">
+                    <img class ="contact_img" 
+                         src="{{ asset('assets/storage/image/ecoconnect.png') }}" 
+                         alt="astronaut outer-space"
+                         title="https://www.freepng.fr">
+                </div>
+                <div class="form_box key_bg1">
+                    <form action="" method="post">
+                        <label class ="key_ftdw font-f2" for="name"><strong>Nom</strong></label>
+                        <input type="text" id="name" name="_surname" placeholder="Nom"/>
+                        <label class ="key_ftdw font-f2" for="name"><strong>Prénom</strong></label>
+                        <input type="text" id="name" name="_surname" placeholder="Prénom"/>
+                        <label class ="key_ftdw font-f2" for="username"><strong>Email</strong></label>
+                        <input type="text" id="username" name="_username" placeholder="Enter Email"/>
+                        <label class ="key_ftdw font-f2" for="description"><strong>Message</strong></label>
+                        <textarea id="description" name="_description" placeholder="Enter your message" rows="6" cols="50"/></textarea>
+                        {# Control Url user is redirected to on success 
+                        <input type="hidden" name="_target_path" value="/account"/> #}
+                        <button class="button_contact key_ftw font-f3 key_bggreen" type="submit">Envoyer</button>
+                    </form>
+                    <div class="cancel_box ">
+                        <form action="{{path('home')}}">
+                            <button class="button_cancel key_ftw font-f3 key_bgred" type="submit">Cancel</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+{% endblock %}

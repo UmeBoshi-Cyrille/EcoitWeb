@@ -1,0 +1,63 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Formations{% endblock %}
+{% block styleSheets %}
+    <link rel="stylesheet" href="{{ asset('assets/scss_admin/admin_instructors.css') }}">
+{% endblock %}
+
+{% block header %}
+    {% include "base/_header.html.twig" %}
+{% endblock %}
+
+{% block main %}
+
+    <section class="section_head">
+        <div class="formation_headwrapper">
+            <div class="formation_pagetitle">
+                <h2 class="formation_h2 key_ftdw font-f1">Liste des instructeurs</h2>
+            </div>
+            <form class="searchbar" action="{{ path('admin_instructors_search') }}"> 
+                <input class="input_searchtext" type="text" name="search">
+                <button class="button_search" type="submit" >
+                    <img class="search_icon" src="{{ asset('assets/storage/icons/search.png') }}" 
+                        alt="Une loupe de recherche"
+                        title="Icon by MD Badsha Meah : https://freeicons.io/profile/3335">
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <section class="section_main">
+        {% for instructor in instructors %}  
+            {% if instructor.name %}
+                <div class="formation_globalwrapper">
+                {% if instructor.hasRole('ROLE_INSTRUCTOR', 'ROLE_STUDENT') %}
+                        <div class="formation_container key_bg2">
+                {% elseif is_granted('ROLE_INSTRUCTOR') == false %}
+                        <div class="formation_container key_bg4">
+                {% endif %}
+                            <div class="formation_title">
+                                <h3 class="formation_h3 key_ftdw font-f1">{{instructor.name}} {{instructor.firstname}}</h3>
+                            </div>
+                            <div class="instructor_imgbox">
+                                <img class="instructor_img" src="" alt="photo de l'instructeur">
+                            </div>
+                            <div class="instructor_buttons">
+                                <a class="_button key_bg3" 
+                                    style="background-color: #57cc99"
+                                    href="{{ path('admin_instructor_update', {'id': instructor.id }) }}">
+                                    <img src="{{ asset('assets/storage/icons/edition.png') }}" 
+                                        alt="icone livre ouvert" 
+                                        title="icon by : https://icons8.com/icon/Zs4SrvznrdHQ/stylo-à-bille">
+                                </a>
+                            </div>
+                        </div>
+                    </div>       
+            {% endif %}  
+        {% endfor %}
+    </section>
+{% endblock %}
+
+{% block javascripts %}
+    <script src="{{ asset('assets/js/formations_visite.js') }}"></script>
+{% endblock %}

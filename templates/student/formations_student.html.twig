@@ -1,0 +1,62 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Formation{% endblock %}
+{% block styleSheets %}
+    <link rel="stylesheet" href="{{ asset('assets/scss_student/formations_student.css') }}">
+{% endblock %}
+
+{% block header %}
+    {% include "base/_header.html.twig" %}
+{% endblock %}
+
+{% block main %}
+
+    <section class="section_head">
+        <div class="formation_headwrapper">
+            <div class="formation_pagetitle">
+                <h2 class="formation_h2 key_ftdw font-f1">Nos Formations</h2>
+            </div>
+            <form class="searchbar" action="{{ path('search') }}"> 
+            {# {{ path('search') }} #}
+                <input class="input_searchtext" type="text" name="search">
+                <button class="button_search" type="submit">
+                    <img class="search_icon" src="{{ asset('assets/storage/icons/search.png') }}" 
+                        alt="Une loupe de recherche"
+                        title="Icon by MD Badsha Meah : https://freeicons.io/profile/3335">
+                </button>
+            </form>
+        </div>
+    </section>
+    <section class="section_main">
+        {% for formation in student_formations %}
+            {% if formation.isPublished %}
+            <div class="formation_globalwrapper">
+                <a href="{{ path('student_formation', {'id': formation.id}) }}"></a>
+                <div class="formation_container key_bg2">
+                    <a class="formation_a" href=""></a>
+                    <div class="formation_title">
+                        <h3 class="formation_h3 key_ftdw font-f1">{{ formation.title }}</h3>
+                        <p class="key_ftdw font-f2">{{ formation.sentence }}</p>
+                    </div>
+                    <div class="instructor_imgbox">
+                        <img class="instructor_img" src="" alt="photo de l'auteur de la formation">
+                    </div>
+                </div>
+                <button class="preview_button" 
+                        id="previewBtn" 
+                        onclick="dropdown(this)"
+                        style="background-color: #57cc99">
+                    <h4 class="preview_h4 key_ftdw font-f2">Aperçu</h4>
+                </button>
+                <div class="preview-box key_bg1" id="preview_dropdown">
+                    <p class="preview_p key_ftdw font-f3">{{ formation.description }}</p>
+                </div>
+            </div>     
+            {% endif %} 
+        {% endfor %} 
+    </section>
+{% endblock %}
+
+{% block javascripts %}
+    <script src="{{ asset('assets/js/formations_visite.js') }}"></script>
+{% endblock %}

@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}notYet{% endblock %}
+{% block styleSheets %}
+    <link rel="stylesheet" href="{{ asset('assets/scss_home/notYet.css') }}">
+{% endblock %}
+
+{% block header %}
+    {% include "base/_header.html.twig" %}
+{% endblock %}
+
+{% block main %}
+    <section class="notYet_section">
+        <div class="notYet_head">
+            <div class="notYet_title">
+                <h2 class="notYet_h2 key_ftdw font-f1">
+                Oups... Vous avez aterri là où il n'y a rien.</h2>
+                <div class="notYet_imgBox">
+                    <img class ="notYet_img" 
+                        src="{{ asset('assets/storage/image/aloneMars.png') }}" 
+                        alt="astronaut alone on Mars"
+                        title="https://www.freepng.fr">
+                </div> 
+                <h3 class="notYet_h3 key_ftdw font-f1">
+                Veuillez faire demi-tour et retrouner sur terre,
+                la seule belle planète où vous pouvez vivre, 
+                respirer et plus qu'abondamment vous épanouir.</h3>
+                <p class="notYet_p key_ftdw font-f1">Cette page n'existe pas encore.</p>
+            </div>
+        </div>
+            
+    </section>
+{% endblock %}

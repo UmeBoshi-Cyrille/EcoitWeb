@@ -1,0 +1,262 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}EcoIT{% endblock %}
+{% block styleSheets %}
+    <link rel="stylesheet" href="{{ asset('assets/scss_home/home.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/scss_home/home_states.css') }}">
+{% endblock %}
+
+{% block header %}
+    {% include "base/_header.html.twig" %}
+{% endblock %}
+
+{% block main %}
+    <section class="home_main-wrapper">
+        <div class="home_section-wrap">
+            <div class="home_head-box">
+                <div class="home_head-title">
+                    <h2 class="home_head-h2 font-f1">EcoIT</h2>
+                    <h3 class="home_head-h3 font-f2">EcoWebLearning</h3>
+                </div>
+                <div class="home_head-imgbox">
+                    <img class="home_img1" 
+                         src="{{ asset('assets/storage/image/greenRocket.png') }}" 
+                         alt="greenRocket"
+                         title="https://www.freepng.fr">
+                </div>
+            </div>
+
+            <article>
+                <div class="home_articles key_bg2">
+                    <div class="home_article-title article_titlebis">
+                        <h2 class="home_article-h article-h2 font-f1 key_ftdw">Qui sommes nous ?</h2>
+                    </div>
+                    <div class="home_article-wrap">
+                        <p class="home_article-p home-p1 font-f3 key_bg1">
+                        C’est un fait, la crise écologique est devenue une urgence majeure.
+                        le changement climatique se fait de plus en plus ressentir au fil 
+                        des années. Et la révolution technologique n'est pas sans conséquences.
+                        </p>
+                        <p class="home_article-p home-p2 font-f3 key_bg1">
+                        En matière d’émissions de CO2, internet pollue 1.5 fois plus que le transport aérien. D’ailleurs, en 20 
+                        ans, le poids d’une page web a été multiplié par 115 (source : https://www.greenit.fr/)
+                        </p>
+                    </div>
+                </div>
+                <hr>
+                <div class="home_articles articles_bis key_bg2">
+                    <div class="home_article-title article-h3">
+                        <img class="home_article-img" 
+                             src="{{ asset('assets/storage/image/lowpolyEarth.png') }}" 
+                             alt="lowpoly-Earth"
+                             title="https://www.freepng.fr">
+                        <h3 class="home_article-h  font-f1 key_ftdw">Nos objectifs</h3>
+                    </div>
+                    <div class="home_article-wrap ">
+                        <p class="home_article-p home-p3 font-f3 key_bg1">
+                        Face à ce constat, un organisme de formation a été fondé en 2017 : EcoIT. Son objectif est 
+                        d’être une plateforme d’éducation permettant à tout instructeur expert en accessibilité et en 
+                        éco-conception web de présenter des modules de cours.
+                        </p>
+                        <p class="home_article-p home-p4 font-f3 key_bg1">
+                        À terme, EcoIT désire devenir la référence française pour les développeurs soucieux de leur 
+                        impact digital. Et pourquoi pas délivrer enfin un label officiel pour classer les sites web selon 
+                        leur empreinte numérique.
+                        </p>
+                    </div>
+                </div>
+            </article>
+
+            <div class="home_btn-wrap">
+                <div class="home-btnbox">
+                    <form action="{{path('register')}}">
+                        <button class="home-btn key_bg3 key_ftdw" type="submit">S'incrire</button>
+                    </form>
+                </div>
+                <div class="home-btnbox">
+                    <form action="{{path('login')}}">
+                        <button class="home-btn key_bg3 key_ftdw">Se connecter</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        
+        <aside>
+            <div class="img_box-lesson">
+                <img src="{{ asset('assets/storage/image/astronaut.png') }}" 
+                     alt="Train"
+                     title="https://www.freepng.fr">
+            </div>
+            <div class="aside-wrapper key_bg3">
+                <div class="home_aside-title">
+                    <h2 class="home_aside-h2 font-f1">Dernières formations ajoutées</h2>
+                </div>
+                <div class="home_aside-wrap">
+                    <ul class="home_aside-ul">
+                        <li class="home_aside-li key_bg2">
+                            <div class="home_aside-box">
+                                <div class="home_li-indicator key_bg5"></div>
+                                <div class="home_li-img">
+                                    <img src="" alt="instructeur photo">
+                                </div>
+                            </div>
+                            <div class="home_li-text">
+                                <h2 class="home_li-h2 font-f2">Titre de la formation</h2>
+                                <p class="home_li-p font-f3">
+                                    Brève explication de la formation 
+                                    Brève explication de la formation
+                                </p>
+                            </div>
+                        </li>
+                        <li class="home_aside-li key_bg1">
+                            <div class="home_aside-box">
+                                <div class="home_li-indicator key_bg5"></div>
+                                <div class="home_li-img">
+                                    <img src="" alt="instructeur photo">
+                                </div>
+                            </div>
+                            <div class="home_li-text">
+                                <h2 class="home_li-h2 font-f2">Titre de la formation</h2>
+                                <p class="home_li-p font-f3">
+                                    Brève explication de la formation 
+                                    Brève explication de la formation
+                                </p>
+                            </div>
+                        </li>
+                        <li class="home_aside-li key_bg2">
+                            <div class="home_aside-box">
+                                <div class="home_li-indicator key_bg5"></div>
+                                <div class="home_li-img">
+                                    <img src="" alt="instructeur photo">
+                                </div>
+                            </div>
+                            <div class="home_li-text">
+                                <h2 class="home_li-h2 font-f2">Titre de la formation</h2>
+                                <p class="home_li-p font-f3">
+                                    Brève explication de la formation 
+                                    Brève explication de la formation
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </aside>
+    </section>
+    
+    <div class="home_video-contain key_bg1 line">
+        <div class="home_video-box">
+            <iframe class="home_video" 
+            src="https://www.youtube.com/embed/6YMRB4bgQ-o" 
+            title="YouTube video player" frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; 
+            encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+            </iframe>
+        </div>
+        <div class="home_video-box">
+            <iframe class="home_video"  
+                src="https://www.youtube.com/embed/N_Hqq3NT24w" 
+                title="YouTube video player" frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; 
+                gyroscope; picture-in-picture" allowfullscreen>
+            </iframe>
+        </div>
+    </div>
+
+    <section class="home_section">
+        <h2 class="home_partner-title key_ftdw font-f3">Partenaires</h2>
+        <div class="home_logo-box">
+            <ul class="home_listlogo">
+                <li class="partner-li">
+                    <a href="#">
+                        <img class="home_partnerlogo" 
+                             src="{{ asset('assets/storage/logo/goodEarth.png') }}" 
+                             alt="logo_goodEarth"
+                             title="Respectueux de la nature icônes créées par Freepik - Flaticon">
+                    </a>
+                    <h3 class="home_partner-h3 key_ftdw font-f1">GoodEarth</h3>
+                </li>
+                <li class="partner-li">
+                    <a href="#">
+                        <img class="home_partnerlogo" 
+                             src="{{ asset('assets/storage/logo/montagne.png') }}" 
+                             alt="logo_Venture"
+                             title="icon by: https://icons8.com/icon/65471/montagne">
+                    </a>
+                    <h3 class="home_partner-h3 key_ftdw font-f1">Venture</h3>
+                </li>
+                <li class="partner-li">
+                    <a href="#">
+                        <img class="home_partnerlogo" 
+                             src="{{ asset('assets/storage/logo/peking-duck.png') }}" 
+                             alt="logo_meatMe"
+                             title="Peking duck icons created by surang - Flaticon">
+                    </a>
+                    <h3 class="home_partner-h3 key_ftdw font-f1">meatMe</h3>
+                </li>
+            </ul>
+        </div>
+        <div class="home_logo-box">
+            <ul class="home_listlogo">
+                <li class="partner-li">
+                    <a href="#">
+                        <img class="home_partnerlogo" 
+                             src="{{ asset('assets/storage/logo/pieds.png') }}" 
+                             alt="logo_Mankind"
+                             title="icon by : https://icons8.com/icon/17598/empreintes-pieds-humains">
+                    </a>
+                    <h3 class="home_partner-h3 key_ftdw font-f1">Mankind</h3>
+                </li>
+                <li class="partner-li">
+                    <a href="#">
+                        <img class="home_partnerlogo" 
+                             src="{{ asset('assets/storage/logo/ours.png') }}" 
+                             alt="logo_Oursar"
+                             title="Ours icônes créées par Freepik - Flaticon">
+                    </a>
+                    <h3 class="home_partner-h3 key_ftdw font-f1">Oursar</h3>
+                </li>
+                <li class="partner-li">
+                    <a href="#">
+                        <img class="home_partnerlogo" 
+                             src="{{ asset('assets/storage/logo/crabe.png') }}" 
+                             alt="logo_Scrab"
+                             title="icon by : https://icons8.com/icon/82021/crabe">
+                    </a>
+                    <h3 class="home_partner-h3 key_ftdw font-f1">Scrab</h3>
+                </li>
+            </ul>
+        </div>
+        <div class="home_logo-box">
+            <ul class="home_listlogo">
+                <li class="partner-li">
+                    <a href="#">
+                        <img class="home_partnerlogo" 
+                             src="{{ asset('assets/storage/logo/fallen.png') }}" 
+                             alt="logo_Fallen"
+                             title="icon by : https://icons8.com/icon/F283aUz0gLiM/fallen-leaf">
+                    </a>
+                    <h3 class="home_partner-h3 key_ftdw font-f1">Fallen</h3>
+                </li>
+                <li class="partner-li">
+                    <a href="#">
+                        <img class="home_partnerlogo" 
+                             src="{{ asset('assets/storage/logo/bambou.png') }}" 
+                             alt="logo_Stabilize"
+                             title="icon by : https://icons8.com/icon/36977/bambou">
+                    </a>
+                    <h3 class="home_partner-h3 key_ftdw font-f1">Stabilize</h3>
+                </li>
+                <li class="partner-li">
+                    <a href="#">
+                        <img class="home_partnerlogo" 
+                             src="{{ asset('assets/storage/logo/canard.png') }}" 
+                             alt="logo_Facebook"
+                             title="Canard icônes créées par Freepik - Flaticon">
+                    </a>
+                    <h3 class="home_partner-h3 key_ftdw font-f1">DuckLog</h3>
+                </li>
+            </ul>
+        </div>
+    </section>
+{% endblock %}

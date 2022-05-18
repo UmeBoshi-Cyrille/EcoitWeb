@@ -1,0 +1,71 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Formations{% endblock %}
+{% block styleSheets %}
+    <link rel="stylesheet" href="{{ asset('assets/scss_instructor/instructor_formations.css') }}">
+{% endblock %}
+
+{% block header %}
+    {% include "base/_header.html.twig" %}
+{% endblock %}
+
+{% block main %}
+
+    <section class="section_head">
+        <div class="formation_headwrapper">
+            <div class="formation_pagetitle">
+                <h2 class="formation_h2 key_ftdw font-f1">Vos Formations</h2>
+            </div>
+            <form class="searchbar" action="{{ path('instructor_search') }}"> 
+            {#  #}
+                <input class="input_searchtext" type="text" name="search">
+                <button class="button_search" type="submit">
+                    <img class="search_icon" src="{{ asset('assets/storage/icons/search.png') }}" 
+                        alt="Une loupe de recherche"
+                        title="Icon by MD Badsha Meah : https://freeicons.io/profile/3335">
+                </button>
+                <a class="btnCreate" href="{{ path('formation_new') }}">
+                    <img src="{{ asset('assets/storage/icons/edition.png') }}" 
+                        alt="icone crayon" 
+                        title="icon by : https://icons8.com/icon/Zs4SrvznrdHQ/stylo-à-bille">
+                </a>
+            </form>
+        </div>
+    </section>
+    <section class="section_main">
+        {% for formation in searchInstructorFormations %}
+            <div class="formation_globalwrapper">
+                <div class="formation_container key_bg2">
+                    <div class="formation_title">
+                        <h3 class="formation_h3 key_ftdw font-f1">{{ formation.title }}</h3>
+                        <p class="key_ftdw font-f2">{{ formation.sentence }}</p>
+                    </div>
+                    <div class="instructor_imgbox">
+                        <img class="instructor_img" src="" alt="photo de l'auteur de la formation">
+                    </div>
+                    <div class="instructor_buttons">
+                        <a href="{{ path('instructor_formation', {'id': formation.id}) }}">
+                            <img src="{{ asset('assets/storage/icons/read.png') }}" 
+                                alt="icone livre ouvert" 
+                                title="icon by : https://icons8.com/icon/jlJLS7OQV1fO/lire">
+                        </a>
+                        <a href="{{ path('instructor_formation_update', {'id': formation.id}) }}">
+                            <img src="{{ asset('assets/storage/icons/edition.png') }}" 
+                                alt="icone crayon" 
+                                title="icon by : https://icons8.com/icon/Zs4SrvznrdHQ/stylo-à-bille">
+                        </a>
+                        <a href="{{ path('instructor_formation_delete', {'id': formation.id}) }}">
+                            <img src="{{ asset('assets/storage/icons/corbeille.png') }}" 
+                                alt="icone poubelle" 
+                                title="icon by : https://icons8.com/icon/9deX0HJ5iAFS/poubelle">
+                        </a>
+                    </div>
+                </div>
+            </div>        
+        {% endfor %}
+    </section>
+{% endblock %}
+
+{% block javascripts %}
+    <script src="{{ asset('assets/js/formations_visite.js') }}"></script>
+{% endblock %}
