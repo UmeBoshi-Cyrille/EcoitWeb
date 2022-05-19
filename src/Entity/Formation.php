@@ -33,7 +33,7 @@ class Formation
     #[Assert\NotBlank()]
     private string $description;
 
-    #[ORM\Column(type: 'datetime')]
+    #[ORM\Column(type: 'datetime_immutable')]
     #[Assert\NotNull()]
     private ?DateTimeImmutable $publishedAt;
 
@@ -96,12 +96,12 @@ class Formation
         return $this;
     }
 
-    public function getPublishedAt(): ?\DateTimeInterface
+    public function getPublishedAt(): ?\DateTimeImmutable
     {
         return $this->publishedAt;
     }
 
-    public function setPublishedAt(\DateTimeInterface $publishedAt): self
+    public function setPublishedAt(\DateTimeImmutable $publishedAt): self
     {
         $this->publishedAt = $publishedAt;
 
