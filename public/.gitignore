@@ -1,4 +1,4 @@
-*.css
+*.scss
 *.css.map
 !reset.css
 
