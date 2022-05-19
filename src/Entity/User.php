@@ -26,7 +26,7 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     #[ORM\Column(type: 'integer')]
     private ?int $id;
 
-    #[Vich\UploadableField(mapping: 'product_image', fileNameProperty: 'imageName', size: 'imageSize')]
+    #[Vich\UploadableField(mapping: 'product_image', fileNameProperty: 'imageName')]
     private ?File $imageFile = null;
 
     #[ORM\Column(type: 'string', nullable: true)]
@@ -207,7 +207,7 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     {
         $this->pseudo = $pseudo;
         if ($pseudo) {
-            $this->updatedAt = new \DateTime('now');
+            $this->updatedAt = new \DateTimeImmutable('now');
         return $this;
         }
     }
